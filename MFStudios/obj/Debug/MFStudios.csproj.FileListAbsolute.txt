@@ -1,0 +1,289 @@
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\MFStudios.exe.config
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\MFStudios.exe
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\MFStudios.pdb
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.BonusSkins.v22.1.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.Data.Desktop.v22.1.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.Data.v22.1.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.Drawing.v22.1.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.Printing.v22.1.Core.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.Sparkline.v22.1.Core.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.Utils.v22.1.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.XtraBars.v22.1.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.XtraEditors.v22.1.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.Pdf.v22.1.Core.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.Pdf.v22.1.Drawing.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.Data.Desktop.v22.1.xml
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.Data.v22.1.xml
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.Printing.v22.1.Core.xml
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.Utils.v22.1.xml
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.XtraBars.v22.1.xml
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.Sparkline.v22.1.Core.xml
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.XtraEditors.v22.1.xml
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.Pdf.v22.1.Core.xml
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\DevExpress.Pdf.v22.1.Drawing.xml
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\de\DevExpress.Data.v22.1.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\es\DevExpress.Data.v22.1.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\ja\DevExpress.Data.v22.1.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\de\DevExpress.Printing.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\es\DevExpress.Printing.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\ja\DevExpress.Printing.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\de\DevExpress.Utils.v22.1.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\es\DevExpress.Utils.v22.1.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\ja\DevExpress.Utils.v22.1.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\de\DevExpress.XtraBars.v22.1.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\es\DevExpress.XtraBars.v22.1.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\ja\DevExpress.XtraBars.v22.1.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\de\DevExpress.Sparkline.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\es\DevExpress.Sparkline.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\ja\DevExpress.Sparkline.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\de\DevExpress.XtraEditors.v22.1.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\es\DevExpress.XtraEditors.v22.1.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\ja\DevExpress.XtraEditors.v22.1.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\de\DevExpress.Pdf.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\es\DevExpress.Pdf.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\bin\Debug\ja\DevExpress.Pdf.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Do An\MFStudios\obj\Debug\MFStudios.csproj.AssemblyReference.cache
+C:\Users\tuong\Desktop\Do An\MFStudios\obj\Debug\MFStudios.csproj.SuggestedBindingRedirects.cache
+C:\Users\tuong\Desktop\Do An\MFStudios\obj\Debug\MFStudios.Form1.resources
+C:\Users\tuong\Desktop\Do An\MFStudios\obj\Debug\MFStudios.frmLogins.resources
+C:\Users\tuong\Desktop\Do An\MFStudios\obj\Debug\MFStudios.frmStaring.resources
+C:\Users\tuong\Desktop\Do An\MFStudios\obj\Debug\MFStudios.Properties.Resources.resources
+C:\Users\tuong\Desktop\Do An\MFStudios\obj\Debug\MFStudios.ResetPW.resources
+C:\Users\tuong\Desktop\Do An\MFStudios\obj\Debug\MFStudios.SendCode.resources
+C:\Users\tuong\Desktop\Do An\MFStudios\obj\Debug\MFStudios.csproj.GenerateResource.cache
+C:\Users\tuong\Desktop\Do An\MFStudios\obj\Debug\MFStudios.exe.licenses
+C:\Users\tuong\Desktop\Do An\MFStudios\obj\Debug\MFStudios.csproj.CoreCompileInputs.cache
+C:\Users\tuong\Desktop\Do An\MFStudios\obj\Debug\MFStudios.csproj.CopyComplete
+C:\Users\tuong\Desktop\Do An\MFStudios\obj\Debug\MFStudios.exe
+C:\Users\tuong\Desktop\Do An\MFStudios\obj\Debug\MFStudios.pdb
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\MFStudios.exe.config
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\MFStudios.exe
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\MFStudios.pdb
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.BonusSkins.v22.1.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.Data.Desktop.v22.1.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.Data.v22.1.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.Drawing.v22.1.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.Printing.v22.1.Core.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.Sparkline.v22.1.Core.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.Utils.v22.1.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.XtraBars.v22.1.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.XtraEditors.v22.1.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.Pdf.v22.1.Core.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.Pdf.v22.1.Drawing.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.Data.Desktop.v22.1.xml
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.Data.v22.1.xml
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.Printing.v22.1.Core.xml
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.Utils.v22.1.xml
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.XtraBars.v22.1.xml
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.Sparkline.v22.1.Core.xml
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.XtraEditors.v22.1.xml
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.Pdf.v22.1.Core.xml
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\DevExpress.Pdf.v22.1.Drawing.xml
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\de\DevExpress.Data.v22.1.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\es\DevExpress.Data.v22.1.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\ja\DevExpress.Data.v22.1.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\de\DevExpress.Printing.v22.1.Core.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\es\DevExpress.Printing.v22.1.Core.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\ja\DevExpress.Printing.v22.1.Core.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\de\DevExpress.Utils.v22.1.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\es\DevExpress.Utils.v22.1.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\ja\DevExpress.Utils.v22.1.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\de\DevExpress.XtraBars.v22.1.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\es\DevExpress.XtraBars.v22.1.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\ja\DevExpress.XtraBars.v22.1.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\de\DevExpress.Sparkline.v22.1.Core.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\es\DevExpress.Sparkline.v22.1.Core.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\ja\DevExpress.Sparkline.v22.1.Core.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\de\DevExpress.XtraEditors.v22.1.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\es\DevExpress.XtraEditors.v22.1.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\ja\DevExpress.XtraEditors.v22.1.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\de\DevExpress.Pdf.v22.1.Core.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\es\DevExpress.Pdf.v22.1.Core.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\ja\DevExpress.Pdf.v22.1.Core.resources.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\obj\Debug\MFStudios.csproj.AssemblyReference.cache
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\obj\Debug\MFStudios.csproj.SuggestedBindingRedirects.cache
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\obj\Debug\MFStudios.Form1.resources
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\obj\Debug\MFStudios.frmStaring.resources
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\obj\Debug\MFStudios.Properties.Resources.resources
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\obj\Debug\MFStudios.ResetPW.resources
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\obj\Debug\MFStudios.SendCode.resources
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\obj\Debug\MFStudios.csproj.GenerateResource.cache
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\obj\Debug\MFStudios.exe.licenses
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\obj\Debug\MFStudios.csproj.CoreCompileInputs.cache
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\obj\Debug\MFStudios.csproj.CopyComplete
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\obj\Debug\MFStudios.exe
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\obj\Debug\MFStudios.pdb
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\obj\Debug\MFStudios.LoginForm.resources
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\EntityFramework.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\EntityFramework.xml
+C:\Users\xuant\OneDrive\Documents\Data\Winform_DoAn\MFStudios\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\MFStudios.exe.config
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\MFStudios.exe
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\MFStudios.pdb
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.BonusSkins.v22.1.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.Data.Desktop.v22.1.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.Data.v22.1.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.Drawing.v22.1.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.Printing.v22.1.Core.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.Sparkline.v22.1.Core.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.Utils.v22.1.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.XtraBars.v22.1.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.XtraEditors.v22.1.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\EntityFramework.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.Pdf.v22.1.Core.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.Pdf.v22.1.Drawing.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.Data.Desktop.v22.1.xml
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.Data.v22.1.xml
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.Printing.v22.1.Core.xml
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.Utils.v22.1.xml
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.XtraBars.v22.1.xml
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.Sparkline.v22.1.Core.xml
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.XtraEditors.v22.1.xml
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\EntityFramework.xml
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.Pdf.v22.1.Core.xml
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\DevExpress.Pdf.v22.1.Drawing.xml
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\de\DevExpress.Data.v22.1.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\es\DevExpress.Data.v22.1.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\ja\DevExpress.Data.v22.1.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\de\DevExpress.Printing.v22.1.Core.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\es\DevExpress.Printing.v22.1.Core.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\ja\DevExpress.Printing.v22.1.Core.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\de\DevExpress.Utils.v22.1.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\es\DevExpress.Utils.v22.1.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\ja\DevExpress.Utils.v22.1.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\de\DevExpress.XtraBars.v22.1.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\es\DevExpress.XtraBars.v22.1.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\ja\DevExpress.XtraBars.v22.1.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\de\DevExpress.Sparkline.v22.1.Core.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\es\DevExpress.Sparkline.v22.1.Core.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\ja\DevExpress.Sparkline.v22.1.Core.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\de\DevExpress.XtraEditors.v22.1.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\es\DevExpress.XtraEditors.v22.1.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\ja\DevExpress.XtraEditors.v22.1.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\de\DevExpress.Pdf.v22.1.Core.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\es\DevExpress.Pdf.v22.1.Core.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\bin\Debug\ja\DevExpress.Pdf.v22.1.Core.resources.dll
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\obj\Debug\MFStudios.csproj.AssemblyReference.cache
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\obj\Debug\MFStudios.csproj.SuggestedBindingRedirects.cache
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\obj\Debug\MFStudios.Form1.resources
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\obj\Debug\MFStudios.frmStaring.resources
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\obj\Debug\MFStudios.LoginForm.resources
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\obj\Debug\MFStudios.Properties.Resources.resources
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\obj\Debug\MFStudios.ResetPW.resources
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\obj\Debug\MFStudios.csproj.GenerateResource.cache
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\obj\Debug\MFStudios.exe.licenses
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\obj\Debug\MFStudios.csproj.CoreCompileInputs.cache
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\obj\Debug\MFStudios.csproj.CopyComplete
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\obj\Debug\MFStudios.exe
+C:\Users\RIN\Desktop\MFStudios_DoAn\MFStudios\MFStudios\obj\Debug\MFStudios.pdb
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\MFStudios.exe.config
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\MFStudios.exe
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\MFStudios.pdb
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.BonusSkins.v22.1.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Data.Desktop.v22.1.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Data.v22.1.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Drawing.v22.1.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Printing.v22.1.Core.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Sparkline.v22.1.Core.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Utils.v22.1.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.XtraBars.v22.1.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.XtraEditors.v22.1.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\EntityFramework.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Pdf.v22.1.Core.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Pdf.v22.1.Drawing.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Data.Desktop.v22.1.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Data.v22.1.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Printing.v22.1.Core.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Utils.v22.1.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.XtraBars.v22.1.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Sparkline.v22.1.Core.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.XtraEditors.v22.1.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\EntityFramework.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Pdf.v22.1.Core.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Pdf.v22.1.Drawing.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\de\DevExpress.Data.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\es\DevExpress.Data.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\ja\DevExpress.Data.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\de\DevExpress.Printing.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\es\DevExpress.Printing.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\ja\DevExpress.Printing.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\de\DevExpress.Utils.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\es\DevExpress.Utils.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\ja\DevExpress.Utils.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\de\DevExpress.XtraBars.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\es\DevExpress.XtraBars.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\ja\DevExpress.XtraBars.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\de\DevExpress.Sparkline.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\es\DevExpress.Sparkline.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\ja\DevExpress.Sparkline.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\de\DevExpress.XtraEditors.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\es\DevExpress.XtraEditors.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\ja\DevExpress.XtraEditors.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\de\DevExpress.Pdf.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\es\DevExpress.Pdf.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\ja\DevExpress.Pdf.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.csproj.AssemblyReference.cache
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.csproj.SuggestedBindingRedirects.cache
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.frmMain.resources
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.frmStaring.resources
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.LoginForm.resources
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.Properties.Resources.resources
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.ResetPW.resources
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.csproj.GenerateResource.cache
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.exe.licenses
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.csproj.CoreCompileInputs.cache
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.csproj.CopyComplete
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.exe
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.pdb
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Diagram.v22.1.Core.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.XtraDiagram.v22.1.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.XtraGrid.v22.1.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.XtraLayout.v22.1.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.XtraPrinting.v22.1.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.XtraVerticalGrid.v22.1.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.RichEdit.v22.1.Core.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.XtraTreeList.v22.1.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Office.v22.1.Core.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Diagram.v22.1.Core.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.XtraDiagram.v22.1.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.XtraGrid.v22.1.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.XtraLayout.v22.1.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.XtraPrinting.v22.1.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.XtraVerticalGrid.v22.1.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.RichEdit.v22.1.Core.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.XtraTreeList.v22.1.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\DevExpress.Office.v22.1.Core.xml
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\de\DevExpress.Diagram.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\es\DevExpress.Diagram.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\ja\DevExpress.Diagram.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\de\DevExpress.XtraGrid.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\es\DevExpress.XtraGrid.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\ja\DevExpress.XtraGrid.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\de\DevExpress.XtraLayout.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\es\DevExpress.XtraLayout.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\ja\DevExpress.XtraLayout.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\de\DevExpress.XtraPrinting.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\es\DevExpress.XtraPrinting.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\ja\DevExpress.XtraPrinting.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\de\DevExpress.XtraVerticalGrid.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\es\DevExpress.XtraVerticalGrid.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\ja\DevExpress.XtraVerticalGrid.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\de\DevExpress.RichEdit.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\es\DevExpress.RichEdit.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\ja\DevExpress.RichEdit.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\de\DevExpress.XtraTreeList.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\es\DevExpress.XtraTreeList.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\ja\DevExpress.XtraTreeList.v22.1.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\de\DevExpress.Office.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\es\DevExpress.Office.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\bin\Debug\ja\DevExpress.Office.v22.1.Core.resources.dll
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.UI.uc_KhachHang.resources
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.UI.uc_LoaiThietBi.resources
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.UI.uc_NhanVien.resources
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.UI.uc_ThietBi.resources
+C:\Users\tuong\Desktop\Doan\MFStudios\obj\Debug\MFStudios.UI.uc_ThueThietBi.resources

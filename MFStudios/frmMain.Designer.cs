@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             this.mainContainer = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.aceDanhMuc = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -117,6 +117,7 @@
             this.aceThietBi.Name = "aceThietBi";
             this.aceThietBi.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceThietBi.Text = "Danh Mục Thiết Bị";
+            this.aceThietBi.Click += new System.EventHandler(this.aceThietBi_Click);
             // 
             // aceLoaiThietBi
             // 
@@ -124,6 +125,7 @@
             this.aceLoaiThietBi.Name = "aceLoaiThietBi";
             this.aceLoaiThietBi.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceLoaiThietBi.Text = "Danh Mục Loại Thiết Bị";
+            this.aceLoaiThietBi.Click += new System.EventHandler(this.aceLoaiThietBi_Click);
             // 
             // aceNhanVien
             // 
@@ -222,11 +224,11 @@
             this.barSubItem2.Id = 3;
             this.barSubItem2.Name = "barSubItem2";
             this.barSubItem2.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            toolTipTitleItem2.Text = "Thông Tin Tài Khoản";
-            toolTipItem2.Text = "Đăng Xuất";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
-            this.barSubItem2.SuperTip = superToolTip2;
+            toolTipTitleItem1.Text = "Thông Tin Tài Khoản";
+            toolTipItem1.Text = "Đăng Xuất";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.barSubItem2.SuperTip = superToolTip1;
             // 
             // barEditItem1
             // 

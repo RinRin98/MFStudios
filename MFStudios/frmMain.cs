@@ -75,6 +75,9 @@ namespace MFStudios
         }
 
         uc_NhanVien ucNhanVien;
+        uc_ThietBi ucThietBi;
+        uc_LoaiThietBi ucLoaiThietBi;
+        uc_KhachHang ucKhachHang;
         private void aceNhanVien_Click(object sender, EventArgs e)
         {
             if (ucNhanVien == null)
@@ -89,6 +92,38 @@ namespace MFStudios
                 ucNhanVien.BringToFront();
             }
             lblTieuDe.Caption = aceNhanVien.Text;
+        }
+
+        private void aceThietBi_Click(object sender, EventArgs e)
+        {
+            if (ucThietBi == null)
+            {
+                ucThietBi = new uc_ThietBi();
+                ucThietBi.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(ucThietBi);
+                ucThietBi.BringToFront();
+            }
+            else
+            {
+                ucThietBi.BringToFront();
+            }
+            lblTieuDe.Caption = aceThietBi.Text;
+        }
+
+        private void aceLoaiThietBi_Click(object sender, EventArgs e)
+        {
+            if (ucLoaiThietBi == null)
+            {
+                ucLoaiThietBi = new uc_LoaiThietBi();
+                ucLoaiThietBi.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(ucLoaiThietBi);
+                ucLoaiThietBi.BringToFront();
+            }
+            else
+            {
+                ucLoaiThietBi.BringToFront();
+            }
+            lblTieuDe.Caption = aceLoaiThietBi.Text;
         }
     }
 }

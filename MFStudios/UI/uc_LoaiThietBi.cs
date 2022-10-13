@@ -15,6 +15,9 @@ namespace MFStudios.UI
         public uc_LoaiThietBi()
         {
             InitializeComponent();
+            
         }
+
+       
     }
 }

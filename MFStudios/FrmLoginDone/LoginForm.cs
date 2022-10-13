@@ -15,7 +15,6 @@ using static DevExpress.XtraEditors.Mask.MaskSettings;
 using static System.Runtime.CompilerServices.RuntimeHelpers;
 using System.Net.Mail;
 using System.Net;
-using MFStudios.Models;
 
 namespace MFStudios
 {
@@ -72,7 +71,7 @@ namespace MFStudios
             {
                 try
                 {
-                    SqlConnection con = new SqlConnection("Data Source=LAPTOP-0APB0UV0\\SQLEXPRESS;Initial Catalog=TestLogin;Integrated Security=True");
+                    SqlConnection con = new SqlConnection("Data Source=RIN\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
                     SqlCommand cmd = new SqlCommand("Select * from NhanVien where MaNV = @MaNV and pass = @pass", con);
                     cmd.Parameters.AddWithValue("@MaNV", txtUserName.Text);
                     cmd.Parameters.AddWithValue("@pass", txtPass.Text);
@@ -110,8 +109,8 @@ namespace MFStudios
         {
             try
             {
-                DBNhanVien context = new DBNhanVien();
-                NhanVien find = context.NhanVien.FirstOrDefault(p => p.MaNV == txtsendUser.Text);
+                DBMFStudios context = new DBMFStudios();
+                NHANVIEN find = context.NHANVIENs.FirstOrDefault(p => p.MANV == txtsendUser.Text);
                 if (find != null)
                 {
                     string messageBody;
@@ -124,7 +123,7 @@ namespace MFStudios
                     smtp.UseDefaultCredentials = false;
                     smtp.Credentials = new System.Net.NetworkCredential("security@mfstudios.vn", "MF@@130622mf");
                     smtp.Host = "pro51.emailserver.vn";
-                    toemail = find.gmail;
+                    toemail = find.EMAIL;
                     MailMessage message = new MailMessage();
                     message.From = new System.Net.Mail.MailAddress("security@mfstudios.vn");
                     message.To.Add(new MailAddress("security@mfstudios.vn"));

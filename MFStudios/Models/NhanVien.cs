@@ -6,26 +6,44 @@ namespace MFStudios.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("NhanVien")]
-    public partial class NhanVien
+    [Table("NHANVIEN")]
+    public partial class NHANVIEN
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public NHANVIEN()
+        {
+            PHIEUTHUETHIETBIs = new HashSet<PHIEUTHUETHIETBI>();
+        }
+
         [Key]
-        [StringLength(5)]
-        public string MaNV { get; set; }
+        [StringLength(10)]
+        public string MANV { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string pass { get; set; }
+        public string PASS { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(35)]
         public string HOTEN { get; set; }
 
-        [StringLength(11)]
+        public bool? GIOITINH { get; set; }
+
+        [Required]
+        [StringLength(15)]
         public string SDT { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string gmail { get; set; }
+        public string EMAIL { get; set; }
+
+        [Required]
+        [StringLength(10)]
+        public string MACV { get; set; }
+
+        public virtual CHUCVU CHUCVU { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PHIEUTHUETHIETBI> PHIEUTHUETHIETBIs { get; set; }
     }
 }

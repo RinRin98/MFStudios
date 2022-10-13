@@ -1,0 +1,16 @@
+C:\Users\tuong\Desktop\frmQLNhanVien\frmQLNhanVien\bin\Debug\frmQLNhanVien.exe.config
+C:\Users\tuong\Desktop\frmQLNhanVien\frmQLNhanVien\bin\Debug\frmQLNhanVien.exe
+C:\Users\tuong\Desktop\frmQLNhanVien\frmQLNhanVien\bin\Debug\frmQLNhanVien.pdb
+C:\Users\tuong\Desktop\frmQLNhanVien\frmQLNhanVien\bin\Debug\EntityFramework.dll
+C:\Users\tuong\Desktop\frmQLNhanVien\frmQLNhanVien\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tuong\Desktop\frmQLNhanVien\frmQLNhanVien\bin\Debug\EntityFramework.xml
+C:\Users\tuong\Desktop\frmQLNhanVien\frmQLNhanVien\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tuong\Desktop\frmQLNhanVien\frmQLNhanVien\obj\Debug\frmQLNhanVien.csproj.AssemblyReference.cache
+C:\Users\tuong\Desktop\frmQLNhanVien\frmQLNhanVien\obj\Debug\frmQLNhanVien.csproj.SuggestedBindingRedirects.cache
+C:\Users\tuong\Desktop\frmQLNhanVien\frmQLNhanVien\obj\Debug\frmQLNhanVien.Form1.resources
+C:\Users\tuong\Desktop\frmQLNhanVien\frmQLNhanVien\obj\Debug\frmQLNhanVien.Properties.Resources.resources
+C:\Users\tuong\Desktop\frmQLNhanVien\frmQLNhanVien\obj\Debug\frmQLNhanVien.csproj.GenerateResource.cache
+C:\Users\tuong\Desktop\frmQLNhanVien\frmQLNhanVien\obj\Debug\frmQLNhanVien.csproj.CoreCompileInputs.cache
+C:\Users\tuong\Desktop\frmQLNhanVien\frmQLNhanVien\obj\Debug\frmQLNhanVien.csproj.CopyComplete
+C:\Users\tuong\Desktop\frmQLNhanVien\frmQLNhanVien\obj\Debug\frmQLNhanVien.exe
+C:\Users\tuong\Desktop\frmQLNhanVien\frmQLNhanVien\obj\Debug\frmQLNhanVien.pdb

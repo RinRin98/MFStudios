@@ -1,14 +1,5 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 namespace MFStudios
 {
@@ -24,7 +15,7 @@ namespace MFStudios
         {
             if (txtNewPW.Text == txtconfirmPW.Text)
             {
-                SqlConnection con = new SqlConnection("Data Source=LAPTOP-0APB0UV0\\SQLEXPRESS;Initial Catalog=TestLogin;Integrated Security=True");
+                SqlConnection con = new SqlConnection("Data Source=RIN\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
                 SqlCommand cmd = new SqlCommand("UPDATE [dbo].[NhanVien]\r\n   SET  [pass] = '"+ txtNewPW.Text + "' WHERE MaNV = '" + MaNV + "' ", con);
                 con.Open();
                 cmd.ExecuteNonQuery();

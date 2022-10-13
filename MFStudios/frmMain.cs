@@ -12,6 +12,7 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using static DevExpress.Utils.Drawing.Helpers.NativeMethods;
 
 namespace MFStudios
 {
@@ -21,18 +22,20 @@ namespace MFStudios
         string MaNV = LoginForm.getUserlogin;
         public frmMain()
         {
+            
             InitializeComponent();   
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
             SqlDataReader dt = null;
+            PhanQuyen();
             try
             {
-                SqlConnection con = new SqlConnection("Data Source=LAPTOP-0APB0UV0\\SQLEXPRESS;Initial Catalog=TestLogin;Integrated Security=True");
-                SqlCommand cmd = new SqlCommand("Select HOTEN from NhanVien where MaNV = '" + MaNV + "' ", con);
+                SqlConnection con = new SqlConnection("Data Source=RIN\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
+                SqlCommand cmd = new SqlCommand("Select HOTEN,  MACV from NHANVIEN where MaNV ='" + MaNV + "' ", con);
                 con.Open();
-                 dt = cmd.ExecuteReader();
+                dt = cmd.ExecuteReader();
                 while (dt.Read())
                 {
                     string UserName = (string)dt["HOTEN"];
@@ -46,7 +49,31 @@ namespace MFStudios
                     dt.Close();
                 }
             }
+
+            
         }
+
+        public void PhanQuyen()
+        {
+            SqlConnection con = new SqlConnection("Data Source=RIN\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
+            SqlCommand cmd = new SqlCommand("Select HOTEN,  MACV from NHANVIEN where MaNV ='" + MaNV + "' ", con);
+            con.Open();
+            SqlDataReader dc = null;
+            dc = cmd.ExecuteReader();
+            while (dc.Read())
+            {
+                string CV = (string)dc["MACV"];
+                if (CV == "QL")
+                {
+                    aceNhanVien.Visible = true;
+                }
+                else if (CV == "NV")
+                {
+                    aceNhanVien.Visible = false;
+                }
+            }
+        }
+
         uc_NhanVien ucNhanVien;
         private void aceNhanVien_Click(object sender, EventArgs e)
         {

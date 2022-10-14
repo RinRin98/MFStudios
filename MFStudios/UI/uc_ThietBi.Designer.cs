@@ -51,7 +51,7 @@
             this.spitNhanVien = new System.Windows.Forms.SplitContainer();
             this.cbbMoTa = new System.Windows.Forms.ComboBox();
             this.cbbTinhTrang = new System.Windows.Forms.ComboBox();
-            this.txtLoaiTB = new System.Windows.Forms.ComboBox();
+            this.cbbLoaiTB = new System.Windows.Forms.ComboBox();
             this.txtTimKiem = new DevExpress.XtraEditors.TextEdit();
             this.txtGiaThue = new DevExpress.XtraEditors.TextEdit();
             this.lblTimKiem = new DevExpress.XtraEditors.LabelControl();
@@ -120,37 +120,37 @@
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 30);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlTop.Size = new System.Drawing.Size(825, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlTop.Size = new System.Drawing.Size(1100, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 557);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 690);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlBottom.Size = new System.Drawing.Size(825, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1100, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 533);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 660);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(825, 24);
+            this.barDockControlRight.Location = new System.Drawing.Point(1100, 30);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 533);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 660);
             // 
             // barButtonItem1
             // 
@@ -201,56 +201,67 @@
             this.LOAITB});
             this.dgvThietBi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvThietBi.Location = new System.Drawing.Point(0, 0);
+            this.dgvThietBi.Margin = new System.Windows.Forms.Padding(4);
             this.dgvThietBi.Name = "dgvThietBi";
             this.dgvThietBi.ReadOnly = true;
-            this.dgvThietBi.Size = new System.Drawing.Size(825, 327);
+            this.dgvThietBi.RowHeadersWidth = 51;
+            this.dgvThietBi.Size = new System.Drawing.Size(1100, 399);
             this.dgvThietBi.TabIndex = 0;
+            this.dgvThietBi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThietBi_CellClick);
             // 
             // MATB
             // 
             this.MATB.HeaderText = "Mã Thiết Bị";
+            this.MATB.MinimumWidth = 6;
             this.MATB.Name = "MATB";
             this.MATB.ReadOnly = true;
             // 
             // TENTB
             // 
             this.TENTB.HeaderText = "Tên Thiết Bị";
+            this.TENTB.MinimumWidth = 6;
             this.TENTB.Name = "TENTB";
             this.TENTB.ReadOnly = true;
             // 
             // SOLUONG
             // 
             this.SOLUONG.HeaderText = "Số Lượng";
+            this.SOLUONG.MinimumWidth = 6;
             this.SOLUONG.Name = "SOLUONG";
             this.SOLUONG.ReadOnly = true;
             // 
             // MOTA
             // 
             this.MOTA.HeaderText = "Mô Tả";
+            this.MOTA.MinimumWidth = 6;
             this.MOTA.Name = "MOTA";
             this.MOTA.ReadOnly = true;
             // 
             // TINHTRANG
             // 
             this.TINHTRANG.HeaderText = "Tình Trạng";
+            this.TINHTRANG.MinimumWidth = 6;
             this.TINHTRANG.Name = "TINHTRANG";
             this.TINHTRANG.ReadOnly = true;
             // 
             // GIATRITB
             // 
             this.GIATRITB.HeaderText = "Giá Trị";
+            this.GIATRITB.MinimumWidth = 6;
             this.GIATRITB.Name = "GIATRITB";
             this.GIATRITB.ReadOnly = true;
             // 
             // GIATHUE
             // 
             this.GIATHUE.HeaderText = "Giá Thuê";
+            this.GIATHUE.MinimumWidth = 6;
             this.GIATHUE.Name = "GIATHUE";
             this.GIATHUE.ReadOnly = true;
             // 
             // LOAITB
             // 
             this.LOAITB.HeaderText = "Loại Thiết Bị";
+            this.LOAITB.MinimumWidth = 6;
             this.LOAITB.Name = "LOAITB";
             this.LOAITB.ReadOnly = true;
             // 
@@ -258,7 +269,8 @@
             // 
             this.spitNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.spitNhanVien.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.spitNhanVien.Location = new System.Drawing.Point(0, 24);
+            this.spitNhanVien.Location = new System.Drawing.Point(0, 30);
+            this.spitNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.spitNhanVien.Name = "spitNhanVien";
             this.spitNhanVien.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -266,7 +278,7 @@
             // 
             this.spitNhanVien.Panel1.Controls.Add(this.cbbMoTa);
             this.spitNhanVien.Panel1.Controls.Add(this.cbbTinhTrang);
-            this.spitNhanVien.Panel1.Controls.Add(this.txtLoaiTB);
+            this.spitNhanVien.Panel1.Controls.Add(this.cbbLoaiTB);
             this.spitNhanVien.Panel1.Controls.Add(this.txtTimKiem);
             this.spitNhanVien.Panel1.Controls.Add(this.txtGiaThue);
             this.spitNhanVien.Panel1.Controls.Add(this.lblTimKiem);
@@ -286,67 +298,84 @@
             // spitNhanVien.Panel2
             // 
             this.spitNhanVien.Panel2.Controls.Add(this.dgvThietBi);
-            this.spitNhanVien.Size = new System.Drawing.Size(825, 533);
-            this.spitNhanVien.SplitterDistance = 202;
+            this.spitNhanVien.Size = new System.Drawing.Size(1100, 660);
+            this.spitNhanVien.SplitterDistance = 256;
+            this.spitNhanVien.SplitterWidth = 5;
             this.spitNhanVien.TabIndex = 21;
             // 
             // cbbMoTa
             // 
             this.cbbMoTa.FormattingEnabled = true;
-            this.cbbMoTa.Location = new System.Drawing.Point(116, 131);
+            this.cbbMoTa.Items.AddRange(new object[] {
+            "Hư hỏng",
+            "Mới",
+            "Sửa chữa",
+            "Cũ"});
+            this.cbbMoTa.Location = new System.Drawing.Point(155, 161);
+            this.cbbMoTa.Margin = new System.Windows.Forms.Padding(4);
             this.cbbMoTa.Name = "cbbMoTa";
-            this.cbbMoTa.Size = new System.Drawing.Size(121, 21);
+            this.cbbMoTa.Size = new System.Drawing.Size(160, 24);
             this.cbbMoTa.TabIndex = 3;
             this.cbbMoTa.TabStop = false;
             // 
             // cbbTinhTrang
             // 
             this.cbbTinhTrang.FormattingEnabled = true;
-            this.cbbTinhTrang.Location = new System.Drawing.Point(439, 18);
+            this.cbbTinhTrang.Items.AddRange(new object[] {
+            "Đã cho thuê",
+            "Chưa cho thuê"});
+            this.cbbTinhTrang.Location = new System.Drawing.Point(585, 22);
+            this.cbbTinhTrang.Margin = new System.Windows.Forms.Padding(4);
             this.cbbTinhTrang.Name = "cbbTinhTrang";
-            this.cbbTinhTrang.Size = new System.Drawing.Size(121, 21);
+            this.cbbTinhTrang.Size = new System.Drawing.Size(160, 24);
             this.cbbTinhTrang.TabIndex = 3;
             this.cbbTinhTrang.TabStop = false;
             // 
-            // txtLoaiTB
+            // cbbLoaiTB
             // 
-            this.txtLoaiTB.FormattingEnabled = true;
-            this.txtLoaiTB.Location = new System.Drawing.Point(439, 130);
-            this.txtLoaiTB.Name = "txtLoaiTB";
-            this.txtLoaiTB.Size = new System.Drawing.Size(121, 21);
-            this.txtLoaiTB.TabIndex = 3;
-            this.txtLoaiTB.TabStop = false;
+            this.cbbLoaiTB.FormattingEnabled = true;
+            this.cbbLoaiTB.Location = new System.Drawing.Point(585, 160);
+            this.cbbLoaiTB.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbLoaiTB.Name = "cbbLoaiTB";
+            this.cbbLoaiTB.Size = new System.Drawing.Size(160, 24);
+            this.cbbLoaiTB.TabIndex = 3;
+            this.cbbLoaiTB.TabStop = false;
             // 
             // txtTimKiem
             // 
             this.txtTimKiem.EditValue = "";
-            this.txtTimKiem.Location = new System.Drawing.Point(650, 170);
+            this.txtTimKiem.Location = new System.Drawing.Point(867, 209);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(130, 20);
+            this.txtTimKiem.Size = new System.Drawing.Size(173, 22);
             this.txtTimKiem.TabIndex = 7;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // txtGiaThue
             // 
             this.txtGiaThue.EditValue = "";
-            this.txtGiaThue.Location = new System.Drawing.Point(439, 91);
+            this.txtGiaThue.Location = new System.Drawing.Point(585, 112);
+            this.txtGiaThue.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiaThue.Name = "txtGiaThue";
-            this.txtGiaThue.Size = new System.Drawing.Size(198, 20);
+            this.txtGiaThue.Size = new System.Drawing.Size(264, 22);
             this.txtGiaThue.TabIndex = 7;
             // 
             // lblTimKiem
             // 
-            this.lblTimKiem.Location = new System.Drawing.Point(554, 174);
+            this.lblTimKiem.Location = new System.Drawing.Point(739, 214);
+            this.lblTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.lblTimKiem.Name = "lblTimKiem";
-            this.lblTimKiem.Size = new System.Drawing.Size(54, 13);
+            this.lblTimKiem.Size = new System.Drawing.Size(69, 16);
             this.lblTimKiem.TabIndex = 0;
             this.lblTimKiem.Text = "Tìm Thiết Bị";
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Location = new System.Drawing.Point(116, 96);
+            this.txtSoLuong.Location = new System.Drawing.Point(155, 118);
+            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoLuong.MenuManager = this.barManager2;
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(180, 20);
+            this.txtSoLuong.Size = new System.Drawing.Size(240, 22);
             this.txtSoLuong.TabIndex = 1;
             // 
             // barManager2
@@ -394,25 +423,28 @@
             // 
             this.bbtnThemTB.Caption = "Thêm Thiết Bị";
             this.bbtnThemTB.Id = 0;
-            this.bbtnThemTB.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnThem.ImageOptions.Image")));
-            this.bbtnThemTB.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnThem.ImageOptions.LargeImage")));
+            this.bbtnThemTB.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnThemTB.ImageOptions.Image")));
+            this.bbtnThemTB.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnThemTB.ImageOptions.LargeImage")));
             this.bbtnThemTB.Name = "bbtnThemTB";
+            this.bbtnThemTB.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnThemTB_ItemClick);
             // 
             // bbtnLuuTB
             // 
             this.bbtnLuuTB.Caption = "Lưu/Update";
             this.bbtnLuuTB.Id = 5;
-            this.bbtnLuuTB.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnLuu.ImageOptions.Image")));
-            this.bbtnLuuTB.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnLuu.ImageOptions.LargeImage")));
+            this.bbtnLuuTB.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnLuuTB.ImageOptions.Image")));
+            this.bbtnLuuTB.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnLuuTB.ImageOptions.LargeImage")));
             this.bbtnLuuTB.Name = "bbtnLuuTB";
+            this.bbtnLuuTB.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnLuuTB_ItemClick);
             // 
             // bbtnXoaTB
             // 
             this.bbtnXoaTB.Caption = "Xóa";
             this.bbtnXoaTB.Id = 2;
-            this.bbtnXoaTB.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnXoa.ImageOptions.Image")));
-            this.bbtnXoaTB.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnXoa.ImageOptions.LargeImage")));
+            this.bbtnXoaTB.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnXoaTB.ImageOptions.Image")));
+            this.bbtnXoaTB.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnXoaTB.ImageOptions.LargeImage")));
             this.bbtnXoaTB.Name = "bbtnXoaTB";
+            this.bbtnXoaTB.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnXoaTB_ItemClick);
             // 
             // bbtnThoat
             // 
@@ -421,6 +453,7 @@
             this.bbtnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnThoat.ImageOptions.Image")));
             this.bbtnThoat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnThoat.ImageOptions.LargeImage")));
             this.bbtnThoat.Name = "bbtnThoat";
+            this.bbtnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnThoat_ItemClick);
             // 
             // bar1
             // 
@@ -440,35 +473,35 @@
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl1.Location = new System.Drawing.Point(0, 0);
             this.barDockControl1.Manager = this.barManager2;
-            this.barDockControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControl1.Size = new System.Drawing.Size(825, 24);
+            this.barDockControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControl1.Size = new System.Drawing.Size(1100, 30);
             // 
             // barDockControl2
             // 
             this.barDockControl2.CausesValidation = false;
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl2.Location = new System.Drawing.Point(0, 557);
+            this.barDockControl2.Location = new System.Drawing.Point(0, 690);
             this.barDockControl2.Manager = this.barManager2;
-            this.barDockControl2.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControl2.Size = new System.Drawing.Size(825, 20);
+            this.barDockControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControl2.Size = new System.Drawing.Size(1100, 20);
             // 
             // barDockControl3
             // 
             this.barDockControl3.CausesValidation = false;
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl3.Location = new System.Drawing.Point(0, 24);
+            this.barDockControl3.Location = new System.Drawing.Point(0, 30);
             this.barDockControl3.Manager = this.barManager2;
-            this.barDockControl3.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControl3.Size = new System.Drawing.Size(0, 533);
+            this.barDockControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 660);
             // 
             // barDockControl4
             // 
             this.barDockControl4.CausesValidation = false;
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl4.Location = new System.Drawing.Point(825, 24);
+            this.barDockControl4.Location = new System.Drawing.Point(1100, 30);
             this.barDockControl4.Manager = this.barManager2;
-            this.barDockControl4.Margin = new System.Windows.Forms.Padding(2);
-            this.barDockControl4.Size = new System.Drawing.Size(0, 533);
+            this.barDockControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 660);
             // 
             // barButtonItem5
             // 
@@ -518,96 +551,108 @@
             // 
             // lblGiaThue
             // 
-            this.lblGiaThue.Location = new System.Drawing.Point(343, 95);
+            this.lblGiaThue.Location = new System.Drawing.Point(457, 117);
+            this.lblGiaThue.Margin = new System.Windows.Forms.Padding(4);
             this.lblGiaThue.Name = "lblGiaThue";
-            this.lblGiaThue.Size = new System.Drawing.Size(42, 13);
+            this.lblGiaThue.Size = new System.Drawing.Size(51, 16);
             this.lblGiaThue.TabIndex = 0;
             this.lblGiaThue.Text = "Giá Thuê";
             // 
             // txtGiaTri
             // 
             this.txtGiaTri.EditValue = "";
-            this.txtGiaTri.Location = new System.Drawing.Point(439, 54);
+            this.txtGiaTri.Location = new System.Drawing.Point(585, 66);
+            this.txtGiaTri.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiaTri.Name = "txtGiaTri";
-            this.txtGiaTri.Size = new System.Drawing.Size(198, 20);
+            this.txtGiaTri.Size = new System.Drawing.Size(264, 22);
             this.txtGiaTri.TabIndex = 4;
             // 
             // lblTinhTrang
             // 
-            this.lblTinhTrang.Location = new System.Drawing.Point(343, 21);
+            this.lblTinhTrang.Location = new System.Drawing.Point(457, 26);
+            this.lblTinhTrang.Margin = new System.Windows.Forms.Padding(4);
             this.lblTinhTrang.Name = "lblTinhTrang";
-            this.lblTinhTrang.Size = new System.Drawing.Size(51, 13);
+            this.lblTinhTrang.Size = new System.Drawing.Size(63, 16);
             this.lblTinhTrang.TabIndex = 0;
             this.lblTinhTrang.Text = "Tình Trạng";
             // 
             // txtMaTB
             // 
             this.txtMaTB.Enabled = false;
-            this.txtMaTB.Location = new System.Drawing.Point(116, 18);
+            this.txtMaTB.Location = new System.Drawing.Point(155, 22);
+            this.txtMaTB.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaTB.Name = "txtMaTB";
-            this.txtMaTB.Size = new System.Drawing.Size(100, 20);
+            this.txtMaTB.Properties.ReadOnly = true;
+            this.txtMaTB.Size = new System.Drawing.Size(133, 22);
             this.txtMaTB.TabIndex = 1;
             this.txtMaTB.TabStop = false;
             // 
             // lblMoTa
             // 
-            this.lblMoTa.Location = new System.Drawing.Point(20, 134);
+            this.lblMoTa.Location = new System.Drawing.Point(27, 165);
+            this.lblMoTa.Margin = new System.Windows.Forms.Padding(4);
             this.lblMoTa.Name = "lblMoTa";
-            this.lblMoTa.Size = new System.Drawing.Size(29, 13);
+            this.lblMoTa.Size = new System.Drawing.Size(36, 16);
             this.lblMoTa.TabIndex = 0;
             this.lblMoTa.Text = "Mô Tả";
             // 
             // txtTenThietBi
             // 
-            this.txtTenThietBi.Location = new System.Drawing.Point(116, 58);
+            this.txtTenThietBi.Location = new System.Drawing.Point(155, 71);
+            this.txtTenThietBi.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenThietBi.MenuManager = this.barManager2;
             this.txtTenThietBi.Name = "txtTenThietBi";
-            this.txtTenThietBi.Size = new System.Drawing.Size(100, 20);
+            this.txtTenThietBi.Size = new System.Drawing.Size(133, 22);
             this.txtTenThietBi.TabIndex = 0;
             // 
             // lblLoaiThietBi
             // 
-            this.lblLoaiThietBi.Location = new System.Drawing.Point(343, 133);
+            this.lblLoaiThietBi.Location = new System.Drawing.Point(457, 164);
+            this.lblLoaiThietBi.Margin = new System.Windows.Forms.Padding(4);
             this.lblLoaiThietBi.Name = "lblLoaiThietBi";
-            this.lblLoaiThietBi.Size = new System.Drawing.Size(57, 13);
+            this.lblLoaiThietBi.Size = new System.Drawing.Size(70, 16);
             this.lblLoaiThietBi.TabIndex = 0;
             this.lblLoaiThietBi.Text = "Loại Thiết Bị";
             // 
             // lblGiaTri
             // 
-            this.lblGiaTri.Location = new System.Drawing.Point(343, 57);
+            this.lblGiaTri.Location = new System.Drawing.Point(457, 70);
+            this.lblGiaTri.Margin = new System.Windows.Forms.Padding(4);
             this.lblGiaTri.Name = "lblGiaTri";
-            this.lblGiaTri.Size = new System.Drawing.Size(30, 13);
+            this.lblGiaTri.Size = new System.Drawing.Size(38, 16);
             this.lblGiaTri.TabIndex = 0;
             this.lblGiaTri.Text = "Giá Trị";
             // 
             // lblSoLuong
             // 
-            this.lblSoLuong.Location = new System.Drawing.Point(20, 100);
+            this.lblSoLuong.Location = new System.Drawing.Point(27, 123);
+            this.lblSoLuong.Margin = new System.Windows.Forms.Padding(4);
             this.lblSoLuong.Name = "lblSoLuong";
-            this.lblSoLuong.Size = new System.Drawing.Size(45, 13);
+            this.lblSoLuong.Size = new System.Drawing.Size(54, 16);
             this.lblSoLuong.TabIndex = 0;
             this.lblSoLuong.Text = "Số Lượng";
             // 
             // lblMaTB
             // 
-            this.lblMaTB.Location = new System.Drawing.Point(20, 21);
+            this.lblMaTB.Location = new System.Drawing.Point(27, 26);
+            this.lblMaTB.Margin = new System.Windows.Forms.Padding(4);
             this.lblMaTB.Name = "lblMaTB";
-            this.lblMaTB.Size = new System.Drawing.Size(52, 13);
+            this.lblMaTB.Size = new System.Drawing.Size(64, 16);
             this.lblMaTB.TabIndex = 0;
             this.lblMaTB.Text = "Mã Thiết Bị";
             // 
             // lblTenTB
             // 
-            this.lblTenTB.Location = new System.Drawing.Point(20, 61);
+            this.lblTenTB.Location = new System.Drawing.Point(27, 75);
+            this.lblTenTB.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenTB.Name = "lblTenTB";
-            this.lblTenTB.Size = new System.Drawing.Size(56, 13);
+            this.lblTenTB.Size = new System.Drawing.Size(69, 16);
             this.lblTenTB.TabIndex = 0;
             this.lblTenTB.Text = "Tên Thiết Bị";
             // 
             // uc_ThietBi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.spitNhanVien);
             this.Controls.Add(this.barDockControlLeft);
@@ -618,9 +663,9 @@
             this.Controls.Add(this.barDockControl4);
             this.Controls.Add(this.barDockControl2);
             this.Controls.Add(this.barDockControl1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "uc_ThietBi";
-            this.Size = new System.Drawing.Size(825, 577);
+            this.Size = new System.Drawing.Size(1100, 710);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThietBi)).EndInit();
             this.spitNhanVien.Panel1.ResumeLayout(false);
@@ -655,7 +700,7 @@
         private System.Windows.Forms.SplitContainer spitNhanVien;
         private System.Windows.Forms.ComboBox cbbMoTa;
         private System.Windows.Forms.ComboBox cbbTinhTrang;
-        private System.Windows.Forms.ComboBox txtLoaiTB;
+        private System.Windows.Forms.ComboBox cbbLoaiTB;
         private DevExpress.XtraEditors.TextEdit txtGiaThue;
         private DevExpress.XtraEditors.TextEdit txtSoLuong;
         private DevExpress.XtraBars.BarManager barManager2;

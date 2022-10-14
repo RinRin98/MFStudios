@@ -133,7 +133,7 @@ namespace MFStudios.UI
         }
         public string TangMa()
         {
-            if (KetNoi("RIN\\SQLEXPRESS", "DBMFSTUDIOS") == false)
+            if (KetNoi("MSI\\SQLEXPRESS", "DBMFSTUDIOS") == false)
             {
                 MessageBox.Show("Nhấn OK để thoát chương trình", "Không kết nối được CSDL!", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 Application.Exit();
@@ -146,7 +146,7 @@ namespace MFStudios.UI
             string ma = "";
             if (dt.Rows.Count <= 0)
             {
-                ma = "NV220";
+                ma = "NV001";
             }
             else
             {

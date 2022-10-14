@@ -94,7 +94,6 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CHUCVU.cs" />
-    <Compile Include="Models\CT_HOADON.cs" />
     <Compile Include="Models\DBMFStudios.cs" />
     <Compile Include="Models\HOADON.cs" />
     <Compile Include="Models\KHACHHANG.cs" />
@@ -159,6 +158,12 @@
     <Compile Include="UI\uc_ThueThietBi.Designer.cs">
       <DependentUpon>uc_ThueThietBi.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\CT_PhieuThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CT_PhieuThue.Designer.cs">
+      <DependentUpon>CT_PhieuThue.cs</DependentUpon>
+    </Compile>
     <Compile Include="UX_UIMain\QLNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +192,9 @@
     <EmbeddedResource Include="FrmLoginDone\ResetPW.resx">
       <DependentUpon>ResetPW.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_HoaDon.resx">
+      <DependentUpon>uc_HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\uc_KhachHang.resx">
       <DependentUpon>uc_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,8 +207,14 @@
     <EmbeddedResource Include="UI\uc_ThietBi.resx">
       <DependentUpon>uc_ThietBi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_ThongKe.resx">
+      <DependentUpon>uc_ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\uc_ThueThietBi.resx">
       <DependentUpon>uc_ThueThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CT_PhieuThue.resx">
+      <DependentUpon>CT_PhieuThue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UX_UIMain\QLNhanVien.resx">
       <DependentUpon>QLNhanVien.cs</DependentUpon>

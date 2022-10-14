@@ -18,8 +18,8 @@ namespace MFStudios
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
-           // Application.Run(new frmMain());
+            //Application.Run(new LoginForm());
+            Application.Run(new frmMain());
             
         }
     }

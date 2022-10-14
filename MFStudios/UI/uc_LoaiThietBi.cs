@@ -1,5 +1,4 @@
-﻿using MFStudios.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,15 +9,58 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MFStudios.Models;
 
 namespace MFStudios.UI
 {
     public partial class uc_LoaiThietBi : UserControl
     {
+        public static string con = @"Data Source=RIN\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
         public uc_LoaiThietBi()
         {
             InitializeComponent();
-            
+        }
+
+        private void uc_LoaiThietBi_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                DBMFStudios context = new DBMFStudios();
+                var listTB = context.LOAITHIETBIs.ToList();
+                BindGird(context.LOAITHIETBIs.ToList());
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void BindGird(List<LOAITHIETBI> listTB)
+        {
+            dgvLoaiTB.Rows.Clear();
+            foreach (LOAITHIETBI s in listTB)
+            {
+
+                int row = dgvLoaiTB.Rows.Add();
+
+                dgvLoaiTB.Rows[row].Cells[0].Value = s.MALOAI;
+                dgvLoaiTB.Rows[row].Cells[1].Value = s.TENLOAI;
+            }
+        }
+
+        private void dgvLoaiTB_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvLoaiTB.Rows[e.RowIndex];
+
+                txtMaLoai.Text = dgvLoaiTB.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
+                txtTenLoai.Text = dgvLoaiTB.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
+                txtMaLoai.Enabled = false;
+                bbtThem.Enabled = true;
+                bbtLuu.Enabled = true;
+            }
         }
         public bool KetNoi(string server, string database)
         {
@@ -37,7 +79,8 @@ namespace MFStudios.UI
         }
         public string TangMa()
         {
-            if (KetNoi("MSI\\SQLEXPRESS", "DBMFSTUDIOS") == false)
+            if (KetNoi("RIN\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
+            //if (KetNoi("MSI\\SQLEXPRESS", "DBMFSTUDIOS") == false)            //link DATABASE TRAN THIEN PHUC
             {
                 MessageBox.Show("Nhấn OK để thoát chương trình", "Không kết nối được CSDL!", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 Application.Exit();
@@ -47,94 +90,67 @@ namespace MFStudios.UI
             DataTable dt = new DataTable();
             //sử dụng phương thức fill để điền dữ liệu vào bảng
             ad.Fill(dt);
-            string ma = "";
-            if (dt.Rows.Count <= 0)
-            {
-                ma = "LT001";
-            }
-            else
-            {
-                int k;
-                ma = "LT";
-                k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 3));
-                k = k + 1;
-                if (k < 10)
-                {
-                    ma = ma + "0";
-                }
-                else if (k < 100)
-                {
-                    ma = ma + "00";
-                }
-                ma = ma + k.ToString();
-            }
-            return ma;
+            string ma = "LTB";
+            Random rand = new Random();
+            string random = (rand.Next(9999)).ToString();
+
+            return ma + random;
         }
         public void clear()
         {
 
             txtMaLoai.Text = "";
-            txtTenThietBi.Focus();
-            txtTenThietBi.Text = "";
-        
-            #region Tong LTB
-            //int sc = dgvLoaiThietBi.Rows.Count;
-            //double tongLTB = 0;
-            //for (int i = 0; i < sc - 1; i++)
-            //{
-            //    tongLTB++;
-            //}
-            //lblKQ.Text = tongLTB.ToString() + " LTB";
-            #endregion
+            txtTenLoai.Focus();
         }
 
-        private void bbtnThemLoai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void bbtThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             clear();
-            bbtnThemLoai.Enabled = true;
-            bbtnLuuLoai.Enabled = true;
+            bbtThem.Enabled = true;
+            bbtLuu.Enabled = true;
             txtMaLoai.Text = TangMa();
             txtTenLoai.Focus();
         }
-        private void BindGird(List<LOAITHIETBI> listLTB)
+
+        private void bbtThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            dgvLoaiThietBi.Rows.Clear();
-            foreach (LOAITHIETBI s in listLTB)
-            {
-                int row = dgvLoaiThietBi.Rows.Add();
-                dgvLoaiThietBi.Rows[row].Cells[0].Value = s.MALOAI;
-                dgvLoaiThietBi.Rows[row].Cells[1].Value = s.TENLOAI;
-              
-            }
+            if (MessageBox.Show("Bạn có muốn thoát không ? ", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                Application.Exit();
         }
-        private void bbtnLuuLoai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+
+        private void bbtLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             try
             {
-                if (txtTenLoai.Text == "")
+
+                if (txtMaLoai.Text == "" ||
+                txtTenLoai.Text == "" 
+                )
                 {
                     MessageBox.Show("Bạn chưa nhập đầy đủ thông Tin !", "Error", MessageBoxButtons.OK);
                 }
                 DBMFStudios context = new DBMFStudios();
-               
+
                 LOAITHIETBI find = context.LOAITHIETBIs.FirstOrDefault(p => p.MALOAI == txtMaLoai.Text);
                 if (find == null)
                 {
-                    LOAITHIETBI ltb = new LOAITHIETBI();
-                    ltb.MALOAI = TangMa();
-                    ltb.TENLOAI = txtTenLoai.Text;
-                    context.LOAITHIETBIs.Add(ltb);
+                    LOAITHIETBI tb = new LOAITHIETBI();
+                    tb.MALOAI = TangMa();
+                    tb.TENLOAI = txtTenLoai.Text;
+                    context.LOAITHIETBIs.Add(tb);
                     context.SaveChanges();
-                    MessageBox.Show("Thêm Loại Thiết Bị thành công!");
+                    MessageBox.Show("Thêm Thiết Bị thành công!");
                 }
                 else
                 {
+                    find.MALOAI = txtMaLoai.Text;
                     find.TENLOAI = txtTenLoai.Text;
                     context.LOAITHIETBIs.AddOrUpdate(find);
                     context.SaveChanges();
-                    MessageBox.Show("Update Loại Thiết Bị thành công!");
+                    MessageBox.Show("Update Thiết Bị thành công!");
                 }
                 BindGird(context.LOAITHIETBIs.ToList());
+                clear();
 
             }
             catch (Exception ex)
@@ -143,49 +159,11 @@ namespace MFStudios.UI
             }
         }
 
-        private void bbtnXoaLoai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            DBMFStudios context = new DBMFStudios();
-            LOAITHIETBI find = context.LOAITHIETBIs.FirstOrDefault(p => p.MALOAI == txtMaLoai.Text);
-            if (find != null)
-            {
-                DialogResult dr = MessageBox.Show("Bạn có muốn xóa ?", "YES/NO", MessageBoxButtons.YesNo);
-                if (dr == DialogResult.Yes)
-                {
-                    context.LOAITHIETBIs.Remove(find);
-                    context.SaveChanges();
-                    MessageBox.Show("Xóa Loại Thiết Bị thành công!", "Thông Báo", MessageBoxButtons.OK);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Không Tìm thấy thiết bị cần xóa!");
-            }
-            BindGird(context.LOAITHIETBIs.ToList());
-        }
-
-        private void bbtnThoatLoai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (MessageBox.Show("Bạn có muốn thoát không ? ", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
-                Application.Exit();
-        }
-
-        private void dgvLoaiThietBi_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int curow = dgvLoaiThietBi.CurrentRow.Index;
-            txtMaLoai.Text = dgvLoaiThietBi.Rows[curow].Cells[0].Value.ToString();
-            txtTenLoai.Text = dgvLoaiThietBi.Rows[curow].Cells[1].Value.ToString();          
-            txtMaTB.Enabled = false;
-            bbtnThemLoai.Enabled = true;
-            bbtnLuuLoai.Enabled = true;
-            bbtnXoaLoai.Enabled = true;
-        }
-
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
             DBMFStudios context = new DBMFStudios();
 
-            var listTimkiem = context.LOAITHIETBIs.Where(p => p.TENLOAI.Contains(txtTimKiem.Text) || p.TENLOAI.Contains(txtTimKiem.Text)).ToList();
+            var listTimkiem = context.LOAITHIETBIs.Where(p => p.MALOAI.Contains(txtTimKiem.Text) || p.TENLOAI.Contains(txtTimKiem.Text)).ToList();
             BindGird(listTimkiem);
         }
     }

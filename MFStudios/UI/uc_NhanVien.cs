@@ -21,7 +21,8 @@ namespace MFStudios.UI
 {
     public partial class uc_NhanVien : UserControl
     {
-     
+
+        public static string con = @"Data Source=RIN\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
         public uc_NhanVien()
         {
             InitializeComponent();
@@ -63,17 +64,7 @@ namespace MFStudios.UI
                 dgvNhanVien.Rows[row].Cells[6].Value = s.CHUCVU.TENCV;
             }
         }
-        private int GetSelectedRow(string MANV)
-        {
-            for (int i = 0; i < dgvNhanVien.Rows.Count; i++)
-            {
-                if (dgvNhanVien.Rows[i].Cells[0].Value.ToString() == MANV)
-                {
-                    return i;
-                }
-            }
-            return -1;
-        }
+      
         private void bbtnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             DBMFStudios context = new DBMFStudios();
@@ -98,8 +89,9 @@ namespace MFStudios.UI
 
         private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            int curow = dgvNhanVien.CurrentRow.Index;
+            if (e.RowIndex >= 0)
+            {
+                int curow = dgvNhanVien.CurrentRow.Index;
             txtMaNV.Text = dgvNhanVien.Rows[curow].Cells[0].Value.ToString();
             txtPass.Text = dgvNhanVien.Rows[curow].Cells[1].Value.ToString();
             txtHoTen.Text = dgvNhanVien.Rows[curow].Cells[2].Value.ToString();
@@ -114,6 +106,7 @@ namespace MFStudios.UI
             bbtnThem.Enabled = true;
             bbtnSua.Enabled = true;
             bbtnXoa.Enabled = true;
+            }
         }
 
         public bool KetNoi(string server, string database)
@@ -133,7 +126,8 @@ namespace MFStudios.UI
         }
         public string TangMa()
         {
-            if (KetNoi("MSI\\SQLEXPRESS", "DBMFSTUDIOS") == false)
+            if (KetNoi("RIN\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
+            //if (KetNoi("MSI\\SQLEXPRESS", "DBMFSTUDIOS") == false)            //link DATABASE TRAN THIEN PHUC
             {
                 MessageBox.Show("Nhấn OK để thoát chương trình", "Không kết nối được CSDL!", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 Application.Exit();
@@ -143,28 +137,11 @@ namespace MFStudios.UI
             DataTable dt = new DataTable();
             //sử dụng phương thức fill để điền dữ liệu vào bảng
             ad.Fill(dt);
-            string ma = "";
-            if (dt.Rows.Count <= 0)
-            {
-                ma = "NV001";
-            }
-            else
-            {
-                int k;
-                ma = "NV";
-                k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 3));  
-                k = k + 1;
-                if (k < 10)
-                {
-                    ma = ma + "0";
-                }
-                else if (k < 100)
-                {
-                    ma = ma + "00";
-                }
-                ma = ma + k.ToString();
-            }
-            return ma;
+            string ma = "NV";
+            Random rand = new Random();
+            string random = (rand.Next(99999)).ToString();
+
+            return ma + random;
         }
 
         
@@ -283,35 +260,9 @@ namespace MFStudios.UI
                 MessageBox.Show(ex.Message);
             }
         }
-        public static string con = @"Data Source=RIN\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
-
-        public static void timkiem(string chuoi, DataGridView db2)
-        {
-            try
-            {
-
-                SqlDataAdapter ad = new SqlDataAdapter("SELECT * FROM NHANVIEN", myClass.mycon);
-                //khởi tạo một instance của class DataTable
-                DataTable dt = new DataTable();
-                //sử dụng phương thức fill để điền dữ liệu vào bảng
-                ad.Fill(dt);
-                ad = new SqlDataAdapter(chuoi, con);
-                dt = new DataTable();
-                SqlCommandBuilder bd = new SqlCommandBuilder(ad);
-                ad.Fill(dt);
-                db2.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("" + ex);
-            }
-
-        }
-
-        
-
        
 
+   
         private void txtTimKiem_TextChanged_1(object sender, EventArgs e)
         {
             DBMFStudios context = new DBMFStudios();

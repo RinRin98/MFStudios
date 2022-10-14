@@ -66,10 +66,14 @@ namespace MFStudios
                 if (CV == "QL")
                 {
                     aceNhanVien.Visible = true;
+                    aceThietBi.Visible = true;
+                    aceLoaiThietBi.Visible = true;
                 }
                 else if (CV == "NV")
                 {
                     aceNhanVien.Visible = false;
+                    aceThietBi.Visible = true;
+                    aceLoaiThietBi.Visible = true;
                 }
             }
         }
@@ -124,6 +128,22 @@ namespace MFStudios
                 ucLoaiThietBi.BringToFront();
             }
             lblTieuDe.Caption = aceLoaiThietBi.Text;
+        }
+
+        private void aceKhachHang_Click(object sender, EventArgs e)
+        {
+            if (ucKhachHang == null)
+            {
+                ucKhachHang = new uc_KhachHang();
+                ucKhachHang.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(ucKhachHang);
+                ucKhachHang.BringToFront();
+            }
+            else
+            {
+                ucKhachHang.BringToFront();
+            }
+            lblTieuDe.Caption = aceKhachHang.Text;
         }
     }
 }

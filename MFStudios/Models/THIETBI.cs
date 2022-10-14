@@ -12,8 +12,6 @@ namespace MFStudios.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public THIETBI()
         {
-            CT_HOADON = new HashSet<CT_HOADON>();
-            HOADONs = new HashSet<HOADON>();
             PHIEUTHUETHIETBIs = new HashSet<PHIEUTHUETHIETBI>();
         }
 
@@ -25,16 +23,6 @@ namespace MFStudios.Models
         [StringLength(35)]
         public string TENTB { get; set; }
 
-        public int SOLUONG { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string MOTA { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string TINHTRANG { get; set; }
-
         public double GIATRITB { get; set; }
 
         public double GIATHUE { get; set; }
@@ -42,12 +30,6 @@ namespace MFStudios.Models
         [Required]
         [StringLength(10)]
         public string MALOAI { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CT_HOADON> CT_HOADON { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HOADON> HOADONs { get; set; }
 
         public virtual LOAITHIETBI LOAITHIETBI { get; set; }
 

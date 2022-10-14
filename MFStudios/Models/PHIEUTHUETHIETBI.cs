@@ -9,19 +9,21 @@ namespace MFStudios.Models
     [Table("PHIEUTHUETHIETBI")]
     public partial class PHIEUTHUETHIETBI
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public PHIEUTHUETHIETBI()
+        {
+            HOADONs = new HashSet<HOADON>();
+        }
+
         [Key]
         [StringLength(10)]
         public string MAPTHUE { get; set; }
-
-        public int SOLUONG { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime NGAYTHUE { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime NGAYHENTRA { get; set; }
-
-        public double TIENCOC { get; set; }
 
         [Required]
         [StringLength(10)]
@@ -34,6 +36,9 @@ namespace MFStudios.Models
         [Required]
         [StringLength(10)]
         public string MATB { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HOADON> HOADONs { get; set; }
 
         public virtual KHACHHANG KHACHHANG { get; set; }
 

@@ -13,7 +13,6 @@ namespace MFStudios.Models
         }
 
         public virtual DbSet<CHUCVU> CHUCVUs { get; set; }
-        public virtual DbSet<CT_HOADON> CT_HOADON { get; set; }
         public virtual DbSet<HOADON> HOADONs { get; set; }
         public virtual DbSet<KHACHHANG> KHACHHANGs { get; set; }
         public virtual DbSet<LOAITHIETBI> LOAITHIETBIs { get; set; }
@@ -32,14 +31,6 @@ namespace MFStudios.Models
                 .WithRequired(e => e.CHUCVU)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<CT_HOADON>()
-                .Property(e => e.SOHD)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<CT_HOADON>()
-                .Property(e => e.MATB)
-                .IsUnicode(false);
-
             modelBuilder.Entity<HOADON>()
                 .Property(e => e.MAHD)
                 .IsUnicode(false);
@@ -49,14 +40,8 @@ namespace MFStudios.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<HOADON>()
-                .Property(e => e.MATB)
+                .Property(e => e.MAPTHUE)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<HOADON>()
-                .HasMany(e => e.CT_HOADON)
-                .WithRequired(e => e.HOADON)
-                .HasForeignKey(e => e.SOHD)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<KHACHHANG>()
                 .Property(e => e.MAKH)
@@ -137,16 +122,6 @@ namespace MFStudios.Models
             modelBuilder.Entity<THIETBI>()
                 .Property(e => e.MALOAI)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<THIETBI>()
-                .HasMany(e => e.CT_HOADON)
-                .WithRequired(e => e.THIETBI)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<THIETBI>()
-                .HasMany(e => e.HOADONs)
-                .WithOptional(e => e.THIETBI)
-                .WillCascadeOnDelete();
 
             modelBuilder.Entity<THIETBI>()
                 .HasMany(e => e.PHIEUTHUETHIETBIs)

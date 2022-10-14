@@ -68,9 +68,9 @@
             // mainContainer
             // 
             this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainContainer.Location = new System.Drawing.Point(243, 31);
+            this.mainContainer.Location = new System.Drawing.Point(250, 31);
             this.mainContainer.Name = "mainContainer";
-            this.mainContainer.Size = new System.Drawing.Size(713, 504);
+            this.mainContainer.Size = new System.Drawing.Size(706, 504);
             this.mainContainer.TabIndex = 0;
             // 
             // accordionControl1
@@ -87,7 +87,7 @@
             this.aceHeThong});
             this.accordionControl1.Location = new System.Drawing.Point(0, 31);
             this.accordionControl1.Name = "accordionControl1";
-            this.accordionControl1.Size = new System.Drawing.Size(243, 504);
+            this.accordionControl1.Size = new System.Drawing.Size(250, 504);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -141,6 +141,7 @@
             this.aceKhachHang.Name = "aceKhachHang";
             this.aceKhachHang.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceKhachHang.Text = "Danh Mục Khách Hàng";
+            this.aceKhachHang.Click += new System.EventHandler(this.aceKhachHang_Click);
             // 
             // aceHoaDon
             // 

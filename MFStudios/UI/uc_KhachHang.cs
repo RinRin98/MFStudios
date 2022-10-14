@@ -223,5 +223,6 @@ namespace MFStudios.UI
             var listTimkiem = context.KHACHHANGs.Where(p => p.MAKH.Contains(txtTimKiem.Text) || p.TENKH.Contains(txtTimKiem.Text)).ToList();
             BindGird(listTimkiem);
         }
+
     }
 }

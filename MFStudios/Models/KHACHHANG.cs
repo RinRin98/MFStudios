@@ -13,7 +13,6 @@ namespace MFStudios.Models
         public KHACHHANG()
         {
             HOADONs = new HashSet<HOADON>();
-            PHIEUTHUETHIETBIs = new HashSet<PHIEUTHUETHIETBI>();
         }
 
         [Key]
@@ -36,8 +35,5 @@ namespace MFStudios.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOADON> HOADONs { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHIEUTHUETHIETBI> PHIEUTHUETHIETBIs { get; set; }
     }
 }

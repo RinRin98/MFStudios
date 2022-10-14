@@ -12,7 +12,7 @@ namespace MFStudios.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public THIETBI()
         {
-            PHIEUTHUETHIETBIs = new HashSet<PHIEUTHUETHIETBI>();
+            HOADONs = new HashSet<HOADON>();
         }
 
         [Key]
@@ -31,9 +31,9 @@ namespace MFStudios.Models
         [StringLength(10)]
         public string MALOAI { get; set; }
 
-        public virtual LOAITHIETBI LOAITHIETBI { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHIEUTHUETHIETBI> PHIEUTHUETHIETBIs { get; set; }
+        public virtual ICollection<HOADON> HOADONs { get; set; }
+
+        public virtual LOAITHIETBI LOAITHIETBI { get; set; }
     }
 }

@@ -728,11 +728,14 @@ C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.frmStaring.resour
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.LoginForm.resources
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.Properties.Resources.resources
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.ResetPW.resources
+C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.UI.uc_HoaDon.resources
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.UI.uc_KhachHang.resources
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.UI.uc_LoaiThietBi.resources
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.UI.uc_NhanVien.resources
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.UI.uc_ThietBi.resources
+C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.UI.uc_ThongKe.resources
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.UI.uc_ThueThietBi.resources
+C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.UI.frmChiTietThue.resources
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.UX_UIMain.QLNhanVien.resources
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.csproj.GenerateResource.cache
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.exe.licenses
@@ -740,6 +743,3 @@ C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.csproj.CoreCompil
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.csproj.CopyComplete
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.exe
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.pdb
-C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.UI.uc_ThongKe.resources
-C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.UI.frmChiTietThue.resources
-C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.UI.uc_HoaDon.resources

@@ -12,7 +12,7 @@ namespace MFStudios.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NHANVIEN()
         {
-            PHIEUTHUETHIETBIs = new HashSet<PHIEUTHUETHIETBI>();
+            HOADONs = new HashSet<HOADON>();
         }
 
         [Key]
@@ -44,6 +44,6 @@ namespace MFStudios.Models
         public virtual CHUCVU CHUCVU { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHIEUTHUETHIETBI> PHIEUTHUETHIETBIs { get; set; }
+        public virtual ICollection<HOADON> HOADONs { get; set; }
     }
 }

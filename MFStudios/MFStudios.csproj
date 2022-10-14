@@ -99,7 +99,6 @@
     <Compile Include="Models\KHACHHANG.cs" />
     <Compile Include="Models\LOAITHIETBI.cs" />
     <Compile Include="Models\NHANVIEN.cs" />
-    <Compile Include="Models\PHIEUTHUETHIETBI.cs" />
     <Compile Include="Models\THIETBI.cs" />
     <Compile Include="myClass.cs" />
     <Compile Include="Program.cs" />

@@ -110,6 +110,7 @@
             this.aceThueThietBi.Name = "aceThueThietBi";
             this.aceThueThietBi.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceThueThietBi.Text = "Cho Thuê Thiết Bị";
+            this.aceThueThietBi.Click += new System.EventHandler(this.aceThueThietBi_Click);
             // 
             // aceThietBi
             // 
@@ -149,6 +150,7 @@
             this.aceHoaDon.Name = "aceHoaDon";
             this.aceHoaDon.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceHoaDon.Text = "Hóa Đơn";
+            this.aceHoaDon.Click += new System.EventHandler(this.aceHoaDon_Click);
             // 
             // aceHeThong
             // 

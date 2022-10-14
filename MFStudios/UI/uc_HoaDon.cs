@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MFStudios.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,59 @@ namespace MFStudios.UI
         public uc_HoaDon()
         {
             InitializeComponent();
+        }
+
+        private void uc_HoaDon_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                DBMFStudios context = new DBMFStudios();
+                BindGird(context.HOADONs.ToList());
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dgvHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvHoaDon.Rows[e.RowIndex];
+                txtMaHD.Text = dgvHoaDon.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
+                txtTenKH.Text = dgvHoaDon.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
+                txtTTThue.Text = dgvHoaDon.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
+                dtpThue.Text = dgvHoaDon.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
+                dtpTra.Text = dgvHoaDon.Rows[e.RowIndex].Cells[4].FormattedValue.ToString();
+                txtTongTien.Text = dgvHoaDon.Rows[e.RowIndex].Cells[5].FormattedValue.ToString();
+
+            }
+        }
+        private void BindGird(List<HOADON> listHD)
+        {
+            dgvHoaDon.Rows.Clear();
+            foreach (HOADON s in listHD)
+            {
+                int row = dgvHoaDon.Rows.Add();
+                dgvHoaDon.Rows[row].Cells[0].Value = s.MAHD;
+                dgvHoaDon.Rows[row].Cells[1].Value = s.KHACHHANG.TENKH;
+                dgvHoaDon.Rows[row].Cells[2].Value = s.THONGTINDONHANG;
+                dgvHoaDon.Rows[row].Cells[3].Value = s.NGAYTHUE;
+                dgvHoaDon.Rows[row].Cells[4].Value = s.NGAYHENTRA;
+                dgvHoaDon.Rows[row].Cells[5].Value = s.TONGTIEN;
+            }
+        }
+
+        private void txtTongTien_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTongTien.Text == "" || txtTongTien.Text == "0") return;
+            decimal number;
+            number = decimal.Parse(txtTongTien.Text, System.Globalization.NumberStyles.Currency);
+            txtTongTien.Text = number.ToString("#,#");
+            txtTongTien.SelectionStart = txtTongTien.Text.Length;
         }
     }
 }

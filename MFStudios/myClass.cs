@@ -112,6 +112,24 @@ namespace MFStudios
             }
 
         }
+        public static void them_dlHoaDon(string sql1)
+        {
+            try
+            {
+                mycon = new SqlConnection(sqlcon);
+                mycon.Open();
+                com = new SqlCommand(sql1, mycon);
+                ad = new SqlDataAdapter(com);
+                DataTable tb = new DataTable();
+                ad.Fill(tb);
+                mycon.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("them loi r cau " + e);
+            }
+
+        }
         public static void Execute_Sua(string sql)
         {
             if (MessageBox.Show("Bạn có chắc chăn muốn sửa không ? ", "Thông báo ", MessageBoxButtons.OKCancel) == DialogResult.OK)

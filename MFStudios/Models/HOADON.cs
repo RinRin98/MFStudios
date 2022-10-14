@@ -13,18 +13,33 @@ namespace MFStudios.Models
         [StringLength(10)]
         public string MAHD { get; set; }
 
+        [Column(TypeName = "date")]
+        public DateTime NGAYTHUE { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime NGAYHENTRA { get; set; }
+
+        [Required]
+        [StringLength(1000)]
+        public string THONGTINDONHANG { get; set; }
+
+        [Required]
         [StringLength(10)]
         public string MAKH { get; set; }
 
+        [Required]
         [StringLength(10)]
-        public string MAPTHUE { get; set; }
+        public string MANV { get; set; }
 
-        public DateTime? NGAYLAP { get; set; }
+        [StringLength(10)]
+        public string MATB { get; set; }
 
         public double TONGTIEN { get; set; }
 
         public virtual KHACHHANG KHACHHANG { get; set; }
 
-        public virtual PHIEUTHUETHIETBI PHIEUTHUETHIETBI { get; set; }
+        public virtual NHANVIEN NHANVIEN { get; set; }
+
+        public virtual THIETBI THIETBI { get; set; }
     }
 }

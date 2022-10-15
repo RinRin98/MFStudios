@@ -76,6 +76,8 @@
             this.NGAYHENTRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GIATHUE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MAKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTimKiem = new System.Windows.Forms.Label();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -160,6 +162,7 @@
             this.bbtnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnThoat.ImageOptions.Image")));
             this.bbtnThoat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnThoat.ImageOptions.LargeImage")));
             this.bbtnThoat.Name = "bbtnThoat";
+            this.bbtnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnThoat_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -233,11 +236,13 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.grThietBi);
             this.splitContainer2.Size = new System.Drawing.Size(971, 262);
-            this.splitContainer2.SplitterDistance = 507;
+            this.splitContainer2.SplitterDistance = 615;
             this.splitContainer2.TabIndex = 0;
             // 
             // grThongTinTB
             // 
+            this.grThongTinTB.Controls.Add(this.txtTimKiem);
+            this.grThongTinTB.Controls.Add(this.lblTimKiem);
             this.grThongTinTB.Controls.Add(this.txtSDT);
             this.grThongTinTB.Controls.Add(this.lblSDT);
             this.grThongTinTB.Controls.Add(this.btnXoa);
@@ -261,14 +266,14 @@
             this.grThongTinTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grThongTinTB.Location = new System.Drawing.Point(0, 0);
             this.grThongTinTB.Name = "grThongTinTB";
-            this.grThongTinTB.Size = new System.Drawing.Size(507, 262);
+            this.grThongTinTB.Size = new System.Drawing.Size(615, 262);
             this.grThongTinTB.TabIndex = 0;
             this.grThongTinTB.Text = "Thông Tin Thiết Bị";
             // 
             // txtSDT
             // 
             this.txtSDT.Enabled = false;
-            this.txtSDT.Location = new System.Drawing.Point(352, 116);
+            this.txtSDT.Location = new System.Drawing.Point(352, 119);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(132, 21);
             this.txtSDT.TabIndex = 1;
@@ -276,7 +281,7 @@
             // lblSDT
             // 
             this.lblSDT.AutoSize = true;
-            this.lblSDT.Location = new System.Drawing.Point(260, 119);
+            this.lblSDT.Location = new System.Drawing.Point(260, 122);
             this.lblSDT.Name = "lblSDT";
             this.lblSDT.Size = new System.Drawing.Size(73, 13);
             this.lblSDT.TabIndex = 0;
@@ -289,6 +294,7 @@
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 4;
+            this.btnXoa.TabStop = false;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -299,6 +305,7 @@
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 4;
+            this.btnThem.TabStop = false;
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -318,6 +325,7 @@
             this.dtpTra.Name = "dtpTra";
             this.dtpTra.Size = new System.Drawing.Size(200, 21);
             this.dtpTra.TabIndex = 2;
+            this.dtpTra.TabStop = false;
             // 
             // txtMaKH
             // 
@@ -333,6 +341,7 @@
             this.dtpThue.Name = "dtpThue";
             this.dtpThue.Size = new System.Drawing.Size(200, 21);
             this.dtpThue.TabIndex = 2;
+            this.dtpThue.TabStop = false;
             // 
             // lblNgayHenTra
             // 
@@ -350,6 +359,7 @@
             this.txtGiaThue.Name = "txtGiaThue";
             this.txtGiaThue.Size = new System.Drawing.Size(100, 21);
             this.txtGiaThue.TabIndex = 1;
+            this.txtGiaThue.TabStop = false;
             this.txtGiaThue.TextChanged += new System.EventHandler(this.txtGiaThue_TextChanged);
             // 
             // lblMaKH
@@ -368,6 +378,7 @@
             this.txtTenTB.Name = "txtTenTB";
             this.txtTenTB.Size = new System.Drawing.Size(100, 21);
             this.txtTenTB.TabIndex = 1;
+            this.txtTenTB.TabStop = false;
             // 
             // lblTenKH
             // 
@@ -385,6 +396,7 @@
             this.txtMaTB.Name = "txtMaTB";
             this.txtMaTB.Size = new System.Drawing.Size(100, 21);
             this.txtMaTB.TabIndex = 1;
+            this.txtMaTB.TabStop = false;
             // 
             // txtMaHD
             // 
@@ -393,6 +405,7 @@
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(100, 21);
             this.txtMaHD.TabIndex = 1;
+            this.txtMaHD.TabStop = false;
             // 
             // lblMaTB
             // 
@@ -445,7 +458,7 @@
             this.grThietBi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grThietBi.Location = new System.Drawing.Point(0, 0);
             this.grThietBi.Name = "grThietBi";
-            this.grThietBi.Size = new System.Drawing.Size(460, 262);
+            this.grThietBi.Size = new System.Drawing.Size(352, 262);
             this.grThietBi.TabIndex = 0;
             this.grThietBi.Text = "Thông Tin Thiết Bị";
             // 
@@ -463,7 +476,7 @@
             this.dgvThietBi.Location = new System.Drawing.Point(2, 23);
             this.dgvThietBi.Name = "dgvThietBi";
             this.dgvThietBi.ReadOnly = true;
-            this.dgvThietBi.Size = new System.Drawing.Size(456, 237);
+            this.dgvThietBi.Size = new System.Drawing.Size(348, 237);
             this.dgvThietBi.TabIndex = 0;
             this.dgvThietBi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -542,6 +555,23 @@
             this.MAKH.Name = "MAKH";
             this.MAKH.ReadOnly = true;
             this.MAKH.Visible = false;
+            // 
+            // lblTimKiem
+            // 
+            this.lblTimKiem.AutoSize = true;
+            this.lblTimKiem.Location = new System.Drawing.Point(503, 45);
+            this.lblTimKiem.Name = "lblTimKiem";
+            this.lblTimKiem.Size = new System.Drawing.Size(86, 13);
+            this.lblTimKiem.TabIndex = 0;
+            this.lblTimKiem.Text = "Tìm Kiếm Thiết Bị";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(595, 42);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(132, 21);
+            this.txtTimKiem.TabIndex = 0;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // uc_ThueThietBi
             // 
@@ -625,5 +655,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GIATHUE;
         private System.Windows.Forms.DataGridViewTextBoxColumn MAKH;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Label lblTimKiem;
     }
 }

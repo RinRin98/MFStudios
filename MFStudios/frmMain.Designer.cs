@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             this.mainContainer = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.aceDanhMuc = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -54,9 +54,9 @@
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.barListItem1 = new DevExpress.XtraBars.BarListItem();
             this.bsiUserName = new DevExpress.XtraBars.BarSubItem();
+            this.bbtnDoiMK = new DevExpress.XtraBars.BarButtonItem();
+            this.bbtnLogout = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.lblTieuDe = new DevExpress.XtraBars.BarStaticItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
@@ -187,8 +187,8 @@
             this.barListItem1,
             this.bsiUserName,
             this.barButtonItem1,
-            this.barButtonItem2,
-            this.barButtonItem3,
+            this.bbtnDoiMK,
+            this.bbtnLogout,
             this.lblTieuDe});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
@@ -227,11 +227,11 @@
             this.barSubItem2.Id = 3;
             this.barSubItem2.Name = "barSubItem2";
             this.barSubItem2.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            toolTipTitleItem1.Text = "Thông Tin Tài Khoản";
-            toolTipItem1.Text = "Đăng Xuất";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            this.barSubItem2.SuperTip = superToolTip1;
+            toolTipTitleItem2.Text = "Thông Tin Tài Khoản";
+            toolTipItem2.Text = "Đăng Xuất";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.barSubItem2.SuperTip = superToolTip2;
             // 
             // barEditItem1
             // 
@@ -262,29 +262,30 @@
             this.bsiUserName.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bsiUserName.ImageOptions.Image")));
             this.bsiUserName.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bsiUserName.ImageOptions.LargeImage")));
             this.bsiUserName.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbtnDoiMK),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbtnLogout)});
             this.bsiUserName.Name = "bsiUserName";
             this.bsiUserName.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // bbtnDoiMK
+            // 
+            this.bbtnDoiMK.Caption = "Đổi Mật Khẩu";
+            this.bbtnDoiMK.Id = 8;
+            this.bbtnDoiMK.Name = "bbtnDoiMK";
+            this.bbtnDoiMK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnDoiMK_ItemClick);
+            // 
+            // bbtnLogout
+            // 
+            this.bbtnLogout.Caption = "Đăng Xuất";
+            this.bbtnLogout.Id = 9;
+            this.bbtnLogout.Name = "bbtnLogout";
+            this.bbtnLogout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnLogout_ItemClick);
             // 
             // barButtonItem1
             // 
             this.barButtonItem1.Caption = "Thông Tin Tài Khoản";
             this.barButtonItem1.Id = 7;
             this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "Đổi Mật Khẩu";
-            this.barButtonItem2.Id = 8;
-            this.barButtonItem2.Name = "barButtonItem2";
-            // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "Đăng Xuất";
-            this.barButtonItem3.Id = 9;
-            this.barButtonItem3.Name = "barButtonItem3";
             // 
             // lblTieuDe
             // 
@@ -304,8 +305,8 @@
             this.barListItem1,
             this.bsiUserName,
             this.barButtonItem1,
-            this.barButtonItem2,
-            this.barButtonItem3,
+            this.bbtnDoiMK,
+            this.bbtnLogout,
             this.lblTieuDe});
             this.fluentFormDefaultManager1.MaxItemId = 11;
             this.fluentFormDefaultManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -349,8 +350,8 @@
         private DevExpress.XtraBars.BarListItem barListItem1;
         private DevExpress.XtraBars.BarSubItem bsiUserName;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem bbtnDoiMK;
+        private DevExpress.XtraBars.BarButtonItem bbtnLogout;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceDanhMuc;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceThueThietBi;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceThietBi;

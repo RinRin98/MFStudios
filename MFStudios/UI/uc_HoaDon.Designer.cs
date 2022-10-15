@@ -33,18 +33,22 @@
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.bbtnThoat = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.grbHoaDon = new DevExpress.XtraEditors.GroupControl();
+            this.txtTTThue = new System.Windows.Forms.TextBox();
             this.dtpTra = new System.Windows.Forms.DateTimePicker();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.txtTenKH = new System.Windows.Forms.TextBox();
+            this.lblTimKiem = new System.Windows.Forms.Label();
             this.dtpThue = new System.Windows.Forms.DateTimePicker();
             this.lblTongTien = new System.Windows.Forms.Label();
+            this.lblTTThue = new System.Windows.Forms.Label();
             this.lblTra = new System.Windows.Forms.Label();
             this.lblThue = new System.Windows.Forms.Label();
             this.txtMaHD = new System.Windows.Forms.TextBox();
@@ -58,8 +62,6 @@
             this.NGAYTRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TONGTIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MAKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTTThue = new System.Windows.Forms.TextBox();
-            this.lblTTThue = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -81,7 +83,7 @@
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barButtonItem1,
-            this.barButtonItem2});
+            this.bbtnThoat});
             this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 2;
             // 
@@ -93,7 +95,7 @@
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem2, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.bbtnThoat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -106,13 +108,14 @@
             this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
             this.barButtonItem1.Name = "barButtonItem1";
             // 
-            // barButtonItem2
+            // bbtnThoat
             // 
-            this.barButtonItem2.Caption = "Thoát";
-            this.barButtonItem2.Id = 1;
-            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
-            this.barButtonItem2.Name = "barButtonItem2";
+            this.bbtnThoat.Caption = "Thoát";
+            this.bbtnThoat.Id = 1;
+            this.bbtnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.bbtnThoat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.bbtnThoat.Name = "bbtnThoat";
+            this.bbtnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnThoat_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -161,15 +164,17 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvHoaDon);
             this.splitContainer1.Size = new System.Drawing.Size(995, 568);
-            this.splitContainer1.SplitterDistance = 162;
+            this.splitContainer1.SplitterDistance = 250;
             this.splitContainer1.TabIndex = 4;
             // 
             // grbHoaDon
             // 
             this.grbHoaDon.Controls.Add(this.txtTTThue);
             this.grbHoaDon.Controls.Add(this.dtpTra);
+            this.grbHoaDon.Controls.Add(this.txtTimKiem);
             this.grbHoaDon.Controls.Add(this.txtTongTien);
             this.grbHoaDon.Controls.Add(this.txtTenKH);
+            this.grbHoaDon.Controls.Add(this.lblTimKiem);
             this.grbHoaDon.Controls.Add(this.dtpThue);
             this.grbHoaDon.Controls.Add(this.lblTongTien);
             this.grbHoaDon.Controls.Add(this.lblTTThue);
@@ -181,9 +186,17 @@
             this.grbHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbHoaDon.Location = new System.Drawing.Point(0, 0);
             this.grbHoaDon.Name = "grbHoaDon";
-            this.grbHoaDon.Size = new System.Drawing.Size(995, 162);
+            this.grbHoaDon.Size = new System.Drawing.Size(995, 250);
             this.grbHoaDon.TabIndex = 0;
             this.grbHoaDon.Text = "Thông Tin Đơn Hàng";
+            // 
+            // txtTTThue
+            // 
+            this.txtTTThue.Location = new System.Drawing.Point(487, 125);
+            this.txtTTThue.Multiline = true;
+            this.txtTTThue.Name = "txtTTThue";
+            this.txtTTThue.Size = new System.Drawing.Size(236, 102);
+            this.txtTTThue.TabIndex = 4;
             // 
             // dtpTra
             // 
@@ -192,6 +205,15 @@
             this.dtpTra.Name = "dtpTra";
             this.dtpTra.Size = new System.Drawing.Size(200, 21);
             this.dtpTra.TabIndex = 3;
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Enabled = false;
+            this.txtTimKiem.Location = new System.Drawing.Point(150, 173);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(185, 21);
+            this.txtTimKiem.TabIndex = 1;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // txtTongTien
             // 
@@ -210,6 +232,15 @@
             this.txtTenKH.Size = new System.Drawing.Size(134, 21);
             this.txtTenKH.TabIndex = 1;
             // 
+            // lblTimKiem
+            // 
+            this.lblTimKiem.AutoSize = true;
+            this.lblTimKiem.Location = new System.Drawing.Point(58, 178);
+            this.lblTimKiem.Name = "lblTimKiem";
+            this.lblTimKiem.Size = new System.Drawing.Size(48, 13);
+            this.lblTimKiem.TabIndex = 0;
+            this.lblTimKiem.Text = "Tìm Kiếm";
+            // 
             // dtpThue
             // 
             this.dtpThue.Enabled = false;
@@ -226,6 +257,15 @@
             this.lblTongTien.Size = new System.Drawing.Size(54, 13);
             this.lblTongTien.TabIndex = 0;
             this.lblTongTien.Text = "Tổng Tiền";
+            // 
+            // lblTTThue
+            // 
+            this.lblTTThue.AutoSize = true;
+            this.lblTTThue.Location = new System.Drawing.Point(382, 147);
+            this.lblTTThue.Name = "lblTTThue";
+            this.lblTTThue.Size = new System.Drawing.Size(81, 13);
+            this.lblTTThue.TabIndex = 0;
+            this.lblTTThue.Text = "Thông Tin Thuê";
             // 
             // lblTra
             // 
@@ -289,7 +329,7 @@
             this.dgvHoaDon.Location = new System.Drawing.Point(0, 0);
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.ReadOnly = true;
-            this.dgvHoaDon.Size = new System.Drawing.Size(995, 402);
+            this.dgvHoaDon.Size = new System.Drawing.Size(995, 314);
             this.dgvHoaDon.TabIndex = 0;
             this.dgvHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDon_CellClick);
             // 
@@ -336,23 +376,6 @@
             this.MAKH.ReadOnly = true;
             this.MAKH.Visible = false;
             // 
-            // txtTTThue
-            // 
-            this.txtTTThue.Location = new System.Drawing.Point(487, 125);
-            this.txtTTThue.Multiline = true;
-            this.txtTTThue.Name = "txtTTThue";
-            this.txtTTThue.Size = new System.Drawing.Size(236, 102);
-            this.txtTTThue.TabIndex = 4;
-            // 
-            // lblTTThue
-            // 
-            this.lblTTThue.AutoSize = true;
-            this.lblTTThue.Location = new System.Drawing.Point(382, 147);
-            this.lblTTThue.Name = "lblTTThue";
-            this.lblTTThue.Size = new System.Drawing.Size(81, 13);
-            this.lblTTThue.TabIndex = 0;
-            this.lblTTThue.Text = "Thông Tin Thuê";
-            // 
             // uc_HoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,7 +407,7 @@
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem bbtnThoat;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
@@ -411,5 +434,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MAKH;
         private System.Windows.Forms.TextBox txtTTThue;
         private System.Windows.Forms.Label lblTTThue;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Label lblTimKiem;
     }
 }

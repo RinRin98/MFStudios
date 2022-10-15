@@ -93,7 +93,7 @@
             this.txtconfirmPW.Name = "txtconfirmPW";
             this.txtconfirmPW.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtconfirmPW.Size = new System.Drawing.Size(123, 20);
-            this.txtconfirmPW.TabIndex = 19;
+            this.txtconfirmPW.TabIndex = 1;
             // 
             // lblnewPW
             // 
@@ -116,7 +116,7 @@
             this.txtNewPW.Name = "txtNewPW";
             this.txtNewPW.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtNewPW.Size = new System.Drawing.Size(123, 20);
-            this.txtNewPW.TabIndex = 20;
+            this.txtNewPW.TabIndex = 0;
             // 
             // lblWelcome
             // 
@@ -165,7 +165,7 @@
             this.pctResetpw.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pctResetpw.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.pctResetpw.Size = new System.Drawing.Size(115, 48);
-            this.pctResetpw.TabIndex = 22;
+            this.pctResetpw.TabIndex = 1;
             this.pctResetpw.TabStop = true;
             this.pctResetpw.Click += new System.EventHandler(this.pctResetpw_Click);
             // 

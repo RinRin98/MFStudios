@@ -41,8 +41,8 @@ namespace MFStudios.UI
                 txtMaHD.Text = dgvHoaDon.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
                 txtTenKH.Text = dgvHoaDon.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
                 txtTTThue.Text = dgvHoaDon.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
-                dtpThue.Text = dgvHoaDon.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
-                dtpTra.Text = dgvHoaDon.Rows[e.RowIndex].Cells[4].FormattedValue.ToString();
+                dtpThue.Value =Convert.ToDateTime(dgvHoaDon.Rows[e.RowIndex].Cells[3].Value);
+                dtpTra.Value = Convert.ToDateTime(dgvHoaDon.Rows[e.RowIndex].Cells[4].Value);
                 txtTongTien.Text = dgvHoaDon.Rows[e.RowIndex].Cells[5].FormattedValue.ToString();
 
             }
@@ -69,6 +69,20 @@ namespace MFStudios.UI
             number = decimal.Parse(txtTongTien.Text, System.Globalization.NumberStyles.Currency);
             txtTongTien.Text = number.ToString("#,#");
             txtTongTien.SelectionStart = txtTongTien.Text.Length;
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            DBMFStudios context = new DBMFStudios();
+
+            var listTimkiem = context.HOADONs.Where(p => p.MAHD.Contains(txtTimKiem.Text) || p.KHACHHANG.TENKH.Contains(txtTimKiem.Text)).ToList();
+            BindGird(listTimkiem);
+        }
+
+        private void bbtnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không ? ", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                Application.Exit();
         }
     }
 }

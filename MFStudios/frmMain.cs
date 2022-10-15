@@ -179,5 +179,19 @@ namespace MFStudios
             }
             lblTieuDe.Caption = aceHoaDon.Text;
         }
+
+        private void bbtnDoiMK_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ResetPW rp = new ResetPW();
+            rp.Show();
+            
+        }
+
+        private void bbtnLogout_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoginForm lg = new LoginForm();
+            this.Close();
+            lg.Show();
+        }
     }
 }

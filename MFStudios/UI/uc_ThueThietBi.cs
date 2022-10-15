@@ -269,8 +269,8 @@ namespace MFStudios.UI
                 //Đưa dữ liệu vào textbox
                 txtMaTB.Text = row.Cells[0].Value.ToString();
                 txtTenTB.Text = row.Cells[1].Value.ToString();
-                dtpThue.Text = row.Cells[2].Value.ToString();
-                dtpTra.Text = row.Cells[3].Value.ToString();
+                dtpThue.Value = Convert.ToDateTime(row.Cells[2].Value.ToString());
+                dtpTra.Value = Convert.ToDateTime(row.Cells[3].Value.ToString());
                 txtGiaThue.Text = row.Cells[4].Value.ToString();
             }
         }
@@ -289,16 +289,16 @@ namespace MFStudios.UI
                     DBMFStudios context = new DBMFStudios();
                     HOADON tb = new HOADON();
                     float thanhtien = 0;
+                    float NumberOfDays;
                     string s = "";
                     int sc = dgvPhieuThueTB.Rows.Count;
                     for (int i = 0; i < sc; i++)
                     {
+                        NumberOfDays = (dtpTra.Value.Day - dtpThue.Value.Day);
                         s = s + dgvPhieuThueTB.Rows[i].Cells[1].Value.ToString() + ", ";
-                        thanhtien = thanhtien + float.Parse(dgvPhieuThueTB.Rows[i].Cells[4].Value.ToString());
+                        thanhtien += (float.Parse(dgvPhieuThueTB.Rows[i].Cells[4].Value.ToString()) * NumberOfDays) ;//* int.Parse(tbSongaythue)));
                     }
                     tb.MAHD = txtMaHD.Text; 
-                    tb.NGAYTHUE = dtpThue.Value.Date;
-                    tb.NGAYHENTRA = dtpTra.Value.Date;
                     tb.THONGTINDONHANG = s.ToString();
                     tb.MAKH = txtMaKH.Text;
                     tb.MANV = MaNV.ToString();
@@ -307,6 +307,7 @@ namespace MFStudios.UI
                     context.SaveChanges();
                     MessageBox.Show("Thêm Hóa Đơn thành công!\n" +"Tổng Tiền phải Thanh Toán là : " + thanhtien , "Thông Báo!!!");
                     dgvPhieuThueTB.Rows.Clear();
+                    txtMaHD.Text = TangMa();
                 }
             }
             catch (Exception ex)
@@ -321,6 +322,20 @@ namespace MFStudios.UI
             DBMFStudios context = new DBMFStudios();
             BindGirdTB(context.THIETBIs.ToList());
 
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            DBMFStudios context = new DBMFStudios();
+
+            var listTimkiem = context.THIETBIs.Where(p => p.MATB.Contains(txtTimKiem.Text) || p.TENTB.Contains(txtTimKiem.Text)).ToList();
+            BindGirdTB(listTimkiem);
+        }
+
+        private void bbtnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không ? ", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                Application.Exit();
         }
     }
     

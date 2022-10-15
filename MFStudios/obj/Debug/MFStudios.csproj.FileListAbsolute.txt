@@ -736,7 +736,6 @@ C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.UI.uc_ThietBi.res
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.UI.uc_ThongKe.resources
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.UI.uc_ThueThietBi.resources
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.UI.frmChiTietThue.resources
-C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.UX_UIMain.QLNhanVien.resources
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.csproj.GenerateResource.cache
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.exe.licenses
 C:\Users\RIN\Desktop\MFStudio_DA\MFStudios\obj\Debug\MFStudios.csproj.CoreCompileInputs.cache

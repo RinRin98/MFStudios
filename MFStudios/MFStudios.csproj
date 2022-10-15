@@ -163,12 +163,6 @@
     <Compile Include="UI\CT_PhieuThue.Designer.cs">
       <DependentUpon>CT_PhieuThue.cs</DependentUpon>
     </Compile>
-    <Compile Include="UX_UIMain\QLNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UX_UIMain\QLNhanVien.Designer.cs">
-      <DependentUpon>QLNhanVien.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +184,9 @@
     </Compile>
     <EmbeddedResource Include="FrmLoginDone\ResetPW.resx">
       <DependentUpon>ResetPW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_Excel.resx">
+      <DependentUpon>uc_Excel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\uc_HoaDon.resx">
       <DependentUpon>uc_HoaDon.cs</DependentUpon>
@@ -214,9 +211,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CT_PhieuThue.resx">
       <DependentUpon>CT_PhieuThue.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UX_UIMain\QLNhanVien.resx">
-      <DependentUpon>QLNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />

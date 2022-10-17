@@ -30,10 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             this.mainContainer = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.aceDanhMuc = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceThueThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -44,7 +46,7 @@
             this.aceHoaDon = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceHeThong = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceThongKe = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.aceExcel = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceThongTin = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
@@ -59,6 +61,8 @@
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.lblTieuDe = new DevExpress.XtraBars.BarStaticItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+            this.mainContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
@@ -67,11 +71,35 @@
             // 
             // mainContainer
             // 
+            this.mainContainer.Controls.Add(this.dateTimePicker1);
+            this.mainContainer.Controls.Add(this.pictureBox1);
             this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainContainer.Location = new System.Drawing.Point(250, 31);
             this.mainContainer.Name = "mainContainer";
             this.mainContainer.Size = new System.Drawing.Size(706, 504);
             this.mainContainer.TabIndex = 0;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dateTimePicker1.Location = new System.Drawing.Point(605, 480);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(101, 21);
+            this.dateTimePicker1.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(706, 504);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // accordionControl1
             // 
@@ -106,6 +134,11 @@
             // 
             // aceThueThietBi
             // 
+            this.aceThueThietBi.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Left),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl)});
             this.aceThueThietBi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("aceThueThietBi.ImageOptions.Image")));
             this.aceThueThietBi.Name = "aceThueThietBi";
             this.aceThueThietBi.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
@@ -156,7 +189,7 @@
             // 
             this.aceHeThong.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceThongKe,
-            this.aceExcel});
+            this.aceThongTin});
             this.aceHeThong.Expanded = true;
             this.aceHeThong.Name = "aceHeThong";
             this.aceHeThong.Text = "HỆ THỐNG";
@@ -167,13 +200,15 @@
             this.aceThongKe.Name = "aceThongKe";
             this.aceThongKe.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceThongKe.Text = "Thống Kê";
+            this.aceThongKe.Click += new System.EventHandler(this.aceThongKe_Click);
             // 
-            // aceExcel
+            // aceThongTin
             // 
-            this.aceExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("aceExcel.ImageOptions.Image")));
-            this.aceExcel.Name = "aceExcel";
-            this.aceExcel.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.aceExcel.Text = "Xuất Excel";
+            this.aceThongTin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("aceThongTin.ImageOptions.Image")));
+            this.aceThongTin.Name = "aceThongTin";
+            this.aceThongTin.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceThongTin.Text = "Thông Tin Phần Mềm";
+            this.aceThongTin.Click += new System.EventHandler(this.aceThongTin_Click);
             // 
             // fluentDesignFormControl1
             // 
@@ -227,11 +262,11 @@
             this.barSubItem2.Id = 3;
             this.barSubItem2.Name = "barSubItem2";
             this.barSubItem2.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            toolTipTitleItem3.Text = "Thông Tin Tài Khoản";
-            toolTipItem3.Text = "Đăng Xuất";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            superToolTip3.Items.Add(toolTipItem3);
-            this.barSubItem2.SuperTip = superToolTip3;
+            toolTipTitleItem1.Text = "Thông Tin Tài Khoản";
+            toolTipItem1.Text = "Đăng Xuất";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.barSubItem2.SuperTip = superToolTip1;
             // 
             // barEditItem1
             // 
@@ -329,6 +364,8 @@
             this.Text = "MfStudios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
+            this.mainContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
@@ -362,8 +399,10 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceHoaDon;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceHeThong;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceThongKe;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement aceExcel;
         private DevExpress.XtraBars.BarStaticItem lblTieuDe;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceThongTin;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 

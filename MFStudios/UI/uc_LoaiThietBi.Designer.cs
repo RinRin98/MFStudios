@@ -180,52 +180,59 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(582, 118);
+            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(121, 139);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(192, 20);
+            this.txtTimKiem.Size = new System.Drawing.Size(192, 21);
             this.txtTimKiem.TabIndex = 1;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // lblTimKiem
             // 
             this.lblTimKiem.AutoSize = true;
-            this.lblTimKiem.Location = new System.Drawing.Point(526, 121);
+            this.lblTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimKiem.Location = new System.Drawing.Point(55, 139);
             this.lblTimKiem.Name = "lblTimKiem";
-            this.lblTimKiem.Size = new System.Drawing.Size(50, 13);
+            this.lblTimKiem.Size = new System.Drawing.Size(60, 15);
             this.lblTimKiem.TabIndex = 0;
             this.lblTimKiem.Text = "Tìm Kiếm";
             // 
             // txtTenLoai
             // 
-            this.txtTenLoai.Location = new System.Drawing.Point(196, 78);
+            this.txtTenLoai.Enabled = false;
+            this.txtTenLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenLoai.Location = new System.Drawing.Point(216, 81);
             this.txtTenLoai.Name = "txtTenLoai";
-            this.txtTenLoai.Size = new System.Drawing.Size(192, 20);
-            this.txtTenLoai.TabIndex = 1;
+            this.txtTenLoai.Size = new System.Drawing.Size(192, 21);
+            this.txtTenLoai.TabIndex = 0;
             // 
             // lblTenLoai
             // 
             this.lblTenLoai.AutoSize = true;
-            this.lblTenLoai.Location = new System.Drawing.Point(140, 81);
+            this.lblTenLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenLoai.Location = new System.Drawing.Point(137, 81);
             this.lblTenLoai.Name = "lblTenLoai";
-            this.lblTenLoai.Size = new System.Drawing.Size(49, 13);
+            this.lblTenLoai.Size = new System.Drawing.Size(55, 15);
             this.lblTenLoai.TabIndex = 0;
             this.lblTenLoai.Text = "Tên Loại";
             // 
             // txtMaLoai
             // 
             this.txtMaLoai.Enabled = false;
-            this.txtMaLoai.Location = new System.Drawing.Point(196, 32);
+            this.txtMaLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaLoai.Location = new System.Drawing.Point(216, 32);
             this.txtMaLoai.Name = "txtMaLoai";
             this.txtMaLoai.ReadOnly = true;
-            this.txtMaLoai.Size = new System.Drawing.Size(100, 20);
+            this.txtMaLoai.Size = new System.Drawing.Size(100, 21);
             this.txtMaLoai.TabIndex = 1;
             // 
             // lblMaLoai
             // 
             this.lblMaLoai.AutoSize = true;
+            this.lblMaLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaLoai.Location = new System.Drawing.Point(140, 35);
             this.lblMaLoai.Name = "lblMaLoai";
-            this.lblMaLoai.Size = new System.Drawing.Size(45, 13);
+            this.lblMaLoai.Size = new System.Drawing.Size(52, 15);
             this.lblMaLoai.TabIndex = 0;
             this.lblMaLoai.Text = "Mã Loại";
             // 

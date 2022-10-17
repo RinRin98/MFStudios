@@ -15,7 +15,7 @@ namespace MFStudios
         {
             if (txtNewPW.Text == txtconfirmPW.Text)
             {
-                SqlConnection con = new SqlConnection("Data Source=RIN\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
+                SqlConnection con = new SqlConnection("Data Source=DESKTOP-OKIVOU5\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
                 SqlCommand cmd = new SqlCommand("UPDATE [dbo].[NhanVien]\r\n   SET  [pass] = '"+ txtNewPW.Text + "' WHERE MaNV = '" + MaNV + "' ", con);
                 con.Open();
                 cmd.ExecuteNonQuery();

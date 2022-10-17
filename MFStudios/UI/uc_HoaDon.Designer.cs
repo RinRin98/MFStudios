@@ -32,7 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_HoaDon));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnXuatExcel = new DevExpress.XtraBars.BarButtonItem();
+            this.btnXuatHoaDon = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnThoat = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -61,7 +62,6 @@
             this.NGAYTHUE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NGAYTRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TONGTIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MAKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -82,10 +82,11 @@
             this.barManager1.DockControls.Add(this.barDockControlRight);
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barButtonItem1,
-            this.bbtnThoat});
+            this.btnXuatExcel,
+            this.bbtnThoat,
+            this.btnXuatHoaDon});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 2;
+            this.barManager1.MaxItemId = 3;
             // 
             // bar2
             // 
@@ -94,26 +95,36 @@
             this.bar2.DockRow = 0;
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnXuatExcel, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnXuatHoaDon, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.bbtnThoat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
             // 
-            // barButtonItem1
+            // btnXuatExcel
             // 
-            this.barButtonItem1.Caption = "Xuất Excel";
-            this.barButtonItem1.Id = 0;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.btnXuatExcel.Caption = "Xuất Excel";
+            this.btnXuatExcel.Id = 0;
+            this.btnXuatExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXuatExcel.ImageOptions.Image")));
+            this.btnXuatExcel.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnXuatExcel.ImageOptions.LargeImage")));
+            this.btnXuatExcel.Name = "btnXuatExcel";
+            this.btnXuatExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
+            // btnXuatHoaDon
+            // 
+            this.btnXuatHoaDon.Caption = "Xuất hóa đơn";
+            this.btnXuatHoaDon.Id = 2;
+            this.btnXuatHoaDon.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnXuatHoaDon.ImageOptions.SvgImage")));
+            this.btnXuatHoaDon.Name = "btnXuatHoaDon";
+            this.btnXuatHoaDon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXuatHoaDon_ItemClick_1);
             // 
             // bbtnThoat
             // 
             this.bbtnThoat.Caption = "Thoát";
             this.bbtnThoat.Id = 1;
-            this.bbtnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.bbtnThoat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.bbtnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnThoat.ImageOptions.Image")));
+            this.bbtnThoat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnThoat.ImageOptions.LargeImage")));
             this.bbtnThoat.Name = "bbtnThoat";
             this.bbtnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnThoat_ItemClick);
             // 
@@ -192,6 +203,7 @@
             // 
             // txtTTThue
             // 
+            this.txtTTThue.Font = new System.Drawing.Font("Tahoma", 9F);
             this.txtTTThue.Location = new System.Drawing.Point(487, 125);
             this.txtTTThue.Multiline = true;
             this.txtTTThue.Name = "txtTTThue";
@@ -201,113 +213,125 @@
             // dtpTra
             // 
             this.dtpTra.Enabled = false;
+            this.dtpTra.Font = new System.Drawing.Font("Tahoma", 9F);
             this.dtpTra.Location = new System.Drawing.Point(487, 80);
             this.dtpTra.Name = "dtpTra";
-            this.dtpTra.Size = new System.Drawing.Size(200, 21);
+            this.dtpTra.Size = new System.Drawing.Size(236, 22);
             this.dtpTra.TabIndex = 3;
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Enabled = false;
-            this.txtTimKiem.Location = new System.Drawing.Point(150, 173);
+            this.txtTimKiem.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.txtTimKiem.Location = new System.Drawing.Point(171, 173);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(185, 21);
-            this.txtTimKiem.TabIndex = 1;
+            this.txtTimKiem.Size = new System.Drawing.Size(185, 22);
+            this.txtTimKiem.TabIndex = 0;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // txtTongTien
             // 
             this.txtTongTien.Enabled = false;
-            this.txtTongTien.Location = new System.Drawing.Point(150, 123);
+            this.txtTongTien.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.txtTongTien.Location = new System.Drawing.Point(171, 125);
             this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(185, 21);
+            this.txtTongTien.Size = new System.Drawing.Size(185, 22);
             this.txtTongTien.TabIndex = 1;
             this.txtTongTien.TextChanged += new System.EventHandler(this.txtTongTien_TextChanged);
             // 
             // txtTenKH
             // 
             this.txtTenKH.Enabled = false;
-            this.txtTenKH.Location = new System.Drawing.Point(150, 82);
+            this.txtTenKH.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.txtTenKH.Location = new System.Drawing.Point(171, 82);
             this.txtTenKH.Name = "txtTenKH";
-            this.txtTenKH.Size = new System.Drawing.Size(134, 21);
+            this.txtTenKH.Size = new System.Drawing.Size(134, 22);
             this.txtTenKH.TabIndex = 1;
             // 
             // lblTimKiem
             // 
             this.lblTimKiem.AutoSize = true;
-            this.lblTimKiem.Location = new System.Drawing.Point(58, 178);
+            this.lblTimKiem.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.lblTimKiem.Location = new System.Drawing.Point(55, 176);
             this.lblTimKiem.Name = "lblTimKiem";
-            this.lblTimKiem.Size = new System.Drawing.Size(48, 13);
+            this.lblTimKiem.Size = new System.Drawing.Size(57, 14);
             this.lblTimKiem.TabIndex = 0;
             this.lblTimKiem.Text = "Tìm Kiếm";
             // 
             // dtpThue
             // 
             this.dtpThue.Enabled = false;
+            this.dtpThue.Font = new System.Drawing.Font("Tahoma", 9F);
             this.dtpThue.Location = new System.Drawing.Point(487, 42);
             this.dtpThue.Name = "dtpThue";
-            this.dtpThue.Size = new System.Drawing.Size(200, 21);
+            this.dtpThue.Size = new System.Drawing.Size(236, 22);
             this.dtpThue.TabIndex = 2;
             // 
             // lblTongTien
             // 
             this.lblTongTien.AutoSize = true;
-            this.lblTongTien.Location = new System.Drawing.Point(58, 128);
+            this.lblTongTien.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.lblTongTien.Location = new System.Drawing.Point(55, 128);
             this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(54, 13);
+            this.lblTongTien.Size = new System.Drawing.Size(64, 14);
             this.lblTongTien.TabIndex = 0;
             this.lblTongTien.Text = "Tổng Tiền";
             // 
             // lblTTThue
             // 
             this.lblTTThue.AutoSize = true;
-            this.lblTTThue.Location = new System.Drawing.Point(382, 147);
+            this.lblTTThue.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.lblTTThue.Location = new System.Drawing.Point(382, 128);
             this.lblTTThue.Name = "lblTTThue";
-            this.lblTTThue.Size = new System.Drawing.Size(81, 13);
+            this.lblTTThue.Size = new System.Drawing.Size(97, 14);
             this.lblTTThue.TabIndex = 0;
             this.lblTTThue.Text = "Thông Tin Thuê";
             // 
             // lblTra
             // 
             this.lblTra.AutoSize = true;
+            this.lblTra.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lblTra.Location = new System.Drawing.Point(382, 82);
             this.lblTra.Name = "lblTra";
-            this.lblTra.Size = new System.Drawing.Size(51, 13);
+            this.lblTra.Size = new System.Drawing.Size(56, 14);
             this.lblTra.TabIndex = 0;
             this.lblTra.Text = "Ngày Trả";
             // 
             // lblThue
             // 
             this.lblThue.AutoSize = true;
+            this.lblThue.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lblThue.Location = new System.Drawing.Point(382, 44);
             this.lblThue.Name = "lblThue";
-            this.lblThue.Size = new System.Drawing.Size(59, 13);
+            this.lblThue.Size = new System.Drawing.Size(67, 14);
             this.lblThue.TabIndex = 0;
             this.lblThue.Text = "Ngày Thuê";
             // 
             // txtMaHD
             // 
             this.txtMaHD.Enabled = false;
-            this.txtMaHD.Location = new System.Drawing.Point(150, 42);
+            this.txtMaHD.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.txtMaHD.Location = new System.Drawing.Point(171, 42);
             this.txtMaHD.Name = "txtMaHD";
-            this.txtMaHD.Size = new System.Drawing.Size(100, 21);
+            this.txtMaHD.Size = new System.Drawing.Size(100, 22);
             this.txtMaHD.TabIndex = 1;
             // 
             // lblTenKH
             // 
             this.lblTenKH.AutoSize = true;
+            this.lblTenKH.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lblTenKH.Location = new System.Drawing.Point(55, 85);
             this.lblTenKH.Name = "lblTenKH";
-            this.lblTenKH.Size = new System.Drawing.Size(85, 13);
+            this.lblTenKH.Size = new System.Drawing.Size(98, 14);
             this.lblTenKH.TabIndex = 0;
             this.lblTenKH.Text = "Tên Khách Hàng";
             // 
             // lblMaHD
             // 
             this.lblMaHD.AutoSize = true;
+            this.lblMaHD.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lblMaHD.Location = new System.Drawing.Point(55, 47);
             this.lblMaHD.Name = "lblMaHD";
-            this.lblMaHD.Size = new System.Drawing.Size(66, 13);
+            this.lblMaHD.Size = new System.Drawing.Size(73, 14);
             this.lblMaHD.TabIndex = 0;
             this.lblMaHD.Text = "Mã Hóa Đơn";
             // 
@@ -323,8 +347,7 @@
             this.TTThue,
             this.NGAYTHUE,
             this.NGAYTRA,
-            this.TONGTIEN,
-            this.MAKH});
+            this.TONGTIEN});
             this.dgvHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHoaDon.Location = new System.Drawing.Point(0, 0);
             this.dgvHoaDon.Name = "dgvHoaDon";
@@ -369,13 +392,6 @@
             this.TONGTIEN.Name = "TONGTIEN";
             this.TONGTIEN.ReadOnly = true;
             // 
-            // MAKH
-            // 
-            this.MAKH.HeaderText = "Mã Khách Hàng";
-            this.MAKH.Name = "MAKH";
-            this.MAKH.ReadOnly = true;
-            this.MAKH.Visible = false;
-            // 
             // uc_HoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,7 +422,7 @@
 
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem btnXuatExcel;
         private DevExpress.XtraBars.BarButtonItem bbtnThoat;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
@@ -425,16 +441,16 @@
         private System.Windows.Forms.Label lblTra;
         private System.Windows.Forms.Label lblThue;
         private System.Windows.Forms.Label lblTenKH;
+        private System.Windows.Forms.TextBox txtTTThue;
+        private System.Windows.Forms.Label lblTTThue;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Label lblTimKiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn MAHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn TTThue;
         private System.Windows.Forms.DataGridViewTextBoxColumn NGAYTHUE;
         private System.Windows.Forms.DataGridViewTextBoxColumn NGAYTRA;
         private System.Windows.Forms.DataGridViewTextBoxColumn TONGTIEN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MAKH;
-        private System.Windows.Forms.TextBox txtTTThue;
-        private System.Windows.Forms.Label lblTTThue;
-        private System.Windows.Forms.TextBox txtTimKiem;
-        private System.Windows.Forms.Label lblTimKiem;
+        private DevExpress.XtraBars.BarButtonItem btnXuatHoaDon;
     }
 }

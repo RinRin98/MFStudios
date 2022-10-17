@@ -1,5 +1,6 @@
 ﻿using DevExpress.Xpo.DB.Helpers;
 using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using MFStudios.Models;
 using System;
 using System.Collections.Generic;
@@ -21,12 +22,11 @@ namespace MFStudios.UI
     public partial class uc_ThueThietBi : UserControl
     {
         string MaNV = LoginForm.getUserlogin;
-        public static SqlConnection con = new SqlConnection( @"Data Source=RIN\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
+        public static SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-OKIVOU5\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
         public uc_ThueThietBi()
         {
             InitializeComponent();
         }
-        KHACHHANG kh;
         private void uc_ThueThietBi_Load(object sender, EventArgs e)
         {
             try
@@ -34,16 +34,12 @@ namespace MFStudios.UI
                 DBMFStudios context = new DBMFStudios();
                 loadKH();
                 BindGirdTB(context.THIETBIs.ToList());
-                
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
-
         public void loadKH()
         {
             DBMFStudios context = new DBMFStudios();
@@ -64,12 +60,12 @@ namespace MFStudios.UI
 
         private void cbbTenKH_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string con = "Data Source=RIN\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
+            string con = "Data Source=DESKTOP-OKIVOU5\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
             string ad = "select * from KHACHHANG where TENKH = @TENKH";
             using (SqlConnection conDataBase = new SqlConnection(con))
             using (SqlCommand cmdDataBase = new SqlCommand(ad, conDataBase))
-            try
-            {
+                try
+                {
                     conDataBase.Open();
                     cmdDataBase.Parameters.Add("@TENKH", SqlDbType.NVarChar).Value = cbbTenKH.Text;
                     using (SqlDataReader myReader = cmdDataBase.ExecuteReader())
@@ -81,16 +77,15 @@ namespace MFStudios.UI
                             string SDT = myReader["SDT"] as String;
                             txtSDT.Text = SDT;
                             string DiaChi = myReader["DIACHI"] as String;
-                        
+
                         }
                     }
-                       
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
         }
         public bool KetNoi(string server, string database)
         {
@@ -109,7 +104,7 @@ namespace MFStudios.UI
         }
         public string TangMa()
         {
-            if (KetNoi("RIN\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
+            if (KetNoi("DESKTOP-OKIVOU5\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
             //if (KetNoi("MSI\\SQLEXPRESS", "DBMFSTUDIOS") == false)            //link DATABASE TRAN THIEN PHUC
             {
                 MessageBox.Show("Nhấn OK để thoát chương trình", "Không kết nối được CSDL!", MessageBoxButtons.OK, MessageBoxIcon.Question);
@@ -131,7 +126,7 @@ namespace MFStudios.UI
 
             txtMaTB.Text = "";
             txtTenTB.Text = "";
-          
+
         }
         private int GetSelectedRow(string maHD)
         {
@@ -162,7 +157,7 @@ namespace MFStudios.UI
         {
             try
             {
-                if (dgvPhieuThueTB.RowCount == null )
+                if (dgvPhieuThueTB.RowCount == null)
                 {
                     btnXoa.Enabled = false;
                 }
@@ -188,7 +183,6 @@ namespace MFStudios.UI
                     dgvThietBi.Rows.RemoveAt(currrow);
                     clear();
                 }
-                
             }
             catch (Exception ex)
             {
@@ -236,7 +230,7 @@ namespace MFStudios.UI
             {
                 int selectedRow = GetSelectedRow(txtMaTB.Text);
                 int currrow = dgvPhieuThueTB.CurrentRow.Index;
-                if (selectedRow == -1)
+                if (selectedRow == 0)
                 {
                     throw new Exception("Không tìm thấy Thiết Bị cần xóa!");
                 }
@@ -250,7 +244,7 @@ namespace MFStudios.UI
                         InsertUpdateTHIETBI(currrow);
                         MessageBox.Show("Xóa Thiết Bị thành công!", "Thông Báo!!!", MessageBoxButtons.OK);
                     }
-                    
+
                 }
 
             }
@@ -280,7 +274,11 @@ namespace MFStudios.UI
 
             try
             {
-                if (dgvPhieuThueTB.RowCount == 0)
+                if (dtpThue.Value.Date > dtpTra.Value.Date)
+                {
+                    MessageBox.Show("Lỗi nhập ngày mời nhập lại!", "Thông báo");
+                }
+                else if (dgvPhieuThueTB.RowCount == 0)
                 {
                     MessageBox.Show("Danh sách trống không thể Lưu Hóa ĐƠNNNNN!");
                 }
@@ -288,34 +286,44 @@ namespace MFStudios.UI
                 {
                     DBMFStudios context = new DBMFStudios();
                     HOADON tb = new HOADON();
-                    float thanhtien = 0;
-                    float NumberOfDays;
+                    int NumberOfDays = 0;
+                    //double ngaythaydoi = 0;
+                    //double ngaykhongthaydoi = 0;
                     string s = "";
                     int sc = dgvPhieuThueTB.Rows.Count;
+                    double thanhtien = 0;
                     for (int i = 0; i < sc; i++)
-                    {
-                        NumberOfDays = (dtpTra.Value.Day - dtpThue.Value.Day);
+                    {                        
                         s = s + dgvPhieuThueTB.Rows[i].Cells[1].Value.ToString() + ", ";
-                        thanhtien += (float.Parse(dgvPhieuThueTB.Rows[i].Cells[4].Value.ToString()) * NumberOfDays) ;//* int.Parse(tbSongaythue)));
+                        DateTime dt = DateTime.Parse(dgvPhieuThueTB.Rows[i].Cells[2].Value.ToString());
+                        DateTime dtra = DateTime.Parse(dgvPhieuThueTB.Rows[i].Cells[3].Value.ToString());
+                        if (dt.Day==dtra.Day)
+                        {
+                            thanhtien += (float.Parse(dgvPhieuThueTB.Rows[i].Cells[4].Value.ToString()));
+                        }
+                        NumberOfDays = dtra.Day - dt.Day;
+                        thanhtien += (float.Parse(dgvPhieuThueTB.Rows[i].Cells[4].Value.ToString())*NumberOfDays);
                     }
-                    tb.MAHD = txtMaHD.Text; 
-                    tb.THONGTINDONHANG = s.ToString();
-                    tb.MAKH = txtMaKH.Text;
-                    tb.MANV = MaNV.ToString();
-                    tb.TONGTIEN = thanhtien;
-                    context.HOADONs.Add(tb);
-                    context.SaveChanges();
-                    MessageBox.Show("Thêm Hóa Đơn thành công!\n" +"Tổng Tiền phải Thanh Toán là : " + thanhtien , "Thông Báo!!!");
-                    dgvPhieuThueTB.Rows.Clear();
-                    txtMaHD.Text = TangMa();
-                }
+                        tb.MAHD = txtMaHD.Text;
+                        tb.NGAYTHUE = dtpThue.Value;
+                        tb.NGAYHENTRA = dtpTra.Value;
+                        tb.THONGTINDONHANG = s.ToString();
+                        tb.MAKH = txtMaKH.Text;
+                        tb.MANV = MaNV.ToString();
+                        tb.TONGTIEN = thanhtien;
+                        context.HOADONs.Add(tb);
+                        context.SaveChanges();
+                        MessageBox.Show("Thêm Hóa Đơn thành công!\n" + "Tổng Tiền phải Thanh Toán là : " + thanhtien, "Thông Báo!!!");
+                        dgvPhieuThueTB.Rows.Clear();
+                        txtMaHD.Text = TangMa();
+                        clear();
+                }                               
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void bbtnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             dgvPhieuThueTB.Rows.Clear();
@@ -338,5 +346,4 @@ namespace MFStudios.UI
                 Application.Exit();
         }
     }
-    
 }

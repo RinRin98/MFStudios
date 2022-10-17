@@ -1,4 +1,5 @@
-﻿using MFStudios.Models;
+﻿using DevExpress.XtraReports.UI;
+using MFStudios.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace MFStudios.UI
 {
     public partial class uc_HoaDon : UserControl
     {
+        DBMFStudios context = new DBMFStudios();
         public uc_HoaDon()
         {
             InitializeComponent();
@@ -24,8 +26,6 @@ namespace MFStudios.UI
             {
                 DBMFStudios context = new DBMFStudios();
                 BindGird(context.HOADONs.ToList());
-
-
             }
             catch (Exception ex)
             {
@@ -41,10 +41,9 @@ namespace MFStudios.UI
                 txtMaHD.Text = dgvHoaDon.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
                 txtTenKH.Text = dgvHoaDon.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
                 txtTTThue.Text = dgvHoaDon.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
-                dtpThue.Value =Convert.ToDateTime(dgvHoaDon.Rows[e.RowIndex].Cells[3].Value);
-                dtpTra.Value = Convert.ToDateTime(dgvHoaDon.Rows[e.RowIndex].Cells[4].Value);
+                dtpThue.Value = Convert.ToDateTime(row.Cells[3].Value.ToString());
+                dtpTra.Value = Convert.ToDateTime(row.Cells[4].Value.ToString());
                 txtTongTien.Text = dgvHoaDon.Rows[e.RowIndex].Cells[5].FormattedValue.ToString();
-
             }
         }
         private void BindGird(List<HOADON> listHD)
@@ -83,6 +82,40 @@ namespace MFStudios.UI
         {
             if (MessageBox.Show("Bạn có muốn thoát không ? ", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 Application.Exit();
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                if (dgvHoaDon.RowCount == 0)
+                {
+                    MessageBox.Show("Danh sách trống không thể Lưu Hóa Đơn vào Excel!");
+                }
+                else
+                {
+                    string duongdan = "";
+                    DateTime ngay = DateTime.Now;
+                    string tim = ngay.ToString();
+                    string randomNameFile = tim.Replace(" ", "_").Replace("/", "-").Replace(":", "-");
+                    XuatExcel.exportecxelhoadon(dgvHoaDon, duongdan, randomNameFile);
+                    MessageBox.Show("Xuất file thành công ", "Thông báo ", MessageBoxButtons.OK);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Không thể xuất file! Lỗi: " + ex.Message, "Thông báo");
+            }
+                
+        }
+
+        
+
+        private void btnXuatHoaDon_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var HoaDon = context.HOADONs.Where(p => p.MAHD == txtMaHD.Text).ToList();
+            InHoaDon ihd = new InHoaDon(HoaDon);
+            ihd.ShowPreview();
         }
     }
 }

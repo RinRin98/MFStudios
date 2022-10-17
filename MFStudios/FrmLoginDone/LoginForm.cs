@@ -54,9 +54,6 @@ namespace MFStudios
                 txtPass.UseSystemPasswordChar = false;
             }
         }
-
-  
-
         private void pctLogin_Click_1(object sender, EventArgs e)
         {
             if (txtUserName.Text == "")
@@ -71,7 +68,7 @@ namespace MFStudios
             {
                 try
                 {
-                    SqlConnection con = new SqlConnection("Data Source=RIN\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
+                    SqlConnection con = new SqlConnection("Data Source=DESKTOP-OKIVOU5\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
                     SqlCommand cmd = new SqlCommand("Select * from NhanVien where MaNV = @MaNV and pass = @pass", con);
                     cmd.Parameters.AddWithValue("@MaNV", txtUserName.Text);
                     cmd.Parameters.AddWithValue("@pass", txtPass.Text);
@@ -80,7 +77,7 @@ namespace MFStudios
                     da.Fill(dt);
                     if (dt.Rows.Count > 0)
                     {
-                        MessageBox.Show("login successfull");
+                        MessageBox.Show("Login Successfull");
                         getUserlogin = txtUserName.Text; 
                         frmMain frm = new frmMain();
                         this.Hide();

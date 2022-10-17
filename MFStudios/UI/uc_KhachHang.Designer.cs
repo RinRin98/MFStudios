@@ -208,25 +208,31 @@
             // txtTimKiem
             // 
             this.txtTimKiem.EditValue = "";
-            this.txtTimKiem.Location = new System.Drawing.Point(664, 136);
+            this.txtTimKiem.Location = new System.Drawing.Point(661, 137);
             this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Properties.Appearance.Options.UseFont = true;
             this.txtTimKiem.Size = new System.Drawing.Size(198, 20);
-            this.txtTimKiem.TabIndex = 7;
+            this.txtTimKiem.TabIndex = 4;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // txtEmail
             // 
             this.txtEmail.EditValue = "";
-            this.txtEmail.Location = new System.Drawing.Point(469, 58);
+            this.txtEmail.Location = new System.Drawing.Point(460, 59);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Properties.Appearance.Options.UseFont = true;
             this.txtEmail.Size = new System.Drawing.Size(198, 20);
-            this.txtEmail.TabIndex = 5;
+            this.txtEmail.TabIndex = 3;
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(127, 98);
+            this.txtDiaChi.Location = new System.Drawing.Point(118, 99);
             this.txtDiaChi.MenuManager = this.barManager2;
             this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Properties.Appearance.Options.UseFont = true;
             this.txtDiaChi.Size = new System.Drawing.Size(180, 20);
             this.txtDiaChi.TabIndex = 1;
             // 
@@ -403,74 +409,92 @@
             // 
             // lbltimKiem
             // 
-            this.lbltimKiem.Location = new System.Drawing.Point(545, 139);
+            this.lbltimKiem.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltimKiem.Appearance.Options.UseFont = true;
+            this.lbltimKiem.Location = new System.Drawing.Point(536, 140);
             this.lbltimKiem.Name = "lbltimKiem";
-            this.lbltimKiem.Size = new System.Drawing.Size(101, 13);
+            this.lbltimKiem.Size = new System.Drawing.Size(119, 14);
             this.lbltimKiem.TabIndex = 0;
             this.lbltimKiem.Text = "Tìm Kiếm Khách Hàng";
             // 
             // txtSDT
             // 
             this.txtSDT.EditValue = "";
-            this.txtSDT.Location = new System.Drawing.Point(469, 20);
+            this.txtSDT.Location = new System.Drawing.Point(460, 21);
             this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.Properties.Appearance.Options.UseFont = true;
             this.txtSDT.Size = new System.Drawing.Size(100, 20);
-            this.txtSDT.TabIndex = 4;
+            this.txtSDT.TabIndex = 2;
             // 
             // lblEmail
             // 
-            this.lblEmail.Location = new System.Drawing.Point(373, 62);
+            this.lblEmail.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Appearance.Options.UseFont = true;
+            this.lblEmail.Location = new System.Drawing.Point(364, 63);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(24, 13);
+            this.lblEmail.Size = new System.Drawing.Size(27, 14);
             this.lblEmail.TabIndex = 0;
             this.lblEmail.Text = "Email";
             // 
             // txtMaKH
             // 
             this.txtMaKH.Enabled = false;
-            this.txtMaKH.Location = new System.Drawing.Point(127, 20);
+            this.txtMaKH.Location = new System.Drawing.Point(118, 21);
             this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaKH.Properties.Appearance.Options.UseFont = true;
             this.txtMaKH.Size = new System.Drawing.Size(180, 20);
             this.txtMaKH.TabIndex = 1;
             this.txtMaKH.TabStop = false;
             // 
             // txtTenKH
             // 
-            this.txtTenKH.Location = new System.Drawing.Point(127, 60);
+            this.txtTenKH.Location = new System.Drawing.Point(118, 61);
             this.txtTenKH.MenuManager = this.barManager2;
             this.txtTenKH.Name = "txtTenKH";
+            this.txtTenKH.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenKH.Properties.Appearance.Options.UseFont = true;
             this.txtTenKH.Size = new System.Drawing.Size(180, 20);
             this.txtTenKH.TabIndex = 0;
             // 
             // lblSDT
             // 
-            this.lblSDT.Location = new System.Drawing.Point(373, 23);
+            this.lblSDT.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSDT.Appearance.Options.UseFont = true;
+            this.lblSDT.Location = new System.Drawing.Point(364, 24);
             this.lblSDT.Name = "lblSDT";
-            this.lblSDT.Size = new System.Drawing.Size(66, 13);
+            this.lblSDT.Size = new System.Drawing.Size(76, 14);
             this.lblSDT.TabIndex = 0;
             this.lblSDT.Text = "Số Điện Thoại";
             // 
             // lblDiaChi
             // 
-            this.lblDiaChi.Location = new System.Drawing.Point(31, 102);
+            this.lblDiaChi.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiaChi.Appearance.Options.UseFont = true;
+            this.lblDiaChi.Location = new System.Drawing.Point(22, 103);
             this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(34, 13);
+            this.lblDiaChi.Size = new System.Drawing.Size(36, 14);
             this.lblDiaChi.TabIndex = 0;
             this.lblDiaChi.Text = "Địa Chỉ";
             // 
             // lblMaKH
             // 
-            this.lblMaKH.Location = new System.Drawing.Point(31, 23);
+            this.lblMaKH.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaKH.Appearance.Options.UseFont = true;
+            this.lblMaKH.Location = new System.Drawing.Point(22, 24);
             this.lblMaKH.Name = "lblMaKH";
-            this.lblMaKH.Size = new System.Drawing.Size(74, 13);
+            this.lblMaKH.Size = new System.Drawing.Size(84, 14);
             this.lblMaKH.TabIndex = 0;
             this.lblMaKH.Text = "Mã Khách Hàng";
             // 
             // lblTenKH
             // 
-            this.lblTenKH.Location = new System.Drawing.Point(31, 63);
+            this.lblTenKH.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenKH.Appearance.Options.UseFont = true;
+            this.lblTenKH.Location = new System.Drawing.Point(18, 64);
             this.lblTenKH.Name = "lblTenKH";
-            this.lblTenKH.Size = new System.Drawing.Size(78, 13);
+            this.lblTenKH.Size = new System.Drawing.Size(91, 14);
             this.lblTenKH.TabIndex = 0;
             this.lblTenKH.Text = "Tên Khách Hàng";
             // 

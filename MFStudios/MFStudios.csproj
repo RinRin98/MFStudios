@@ -34,13 +34,20 @@
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v22.1" />
     <Reference Include="DevExpress.Charts.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v22.1" />
     <Reference Include="DevExpress.Data.v22.1" />
+    <Reference Include="DevExpress.DataAccess.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Diagram.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Pdf.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v22.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.1.Export, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v22.1" />
     <Reference Include="DevExpress.Utils.v22.1.UI, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v22.1" />
     <Reference Include="DevExpress.Sparkline.v22.1.Core" />
     <Reference Include="DevExpress.XtraCharts.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -49,15 +56,22 @@
     <Reference Include="DevExpress.XtraDiagram.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.1" />
     <Reference Include="DevExpress.Drawing.v22.1" />
+    <Reference Include="DevExpress.XtraGauges.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v22.1.Extensions, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraVerticalGrid.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -109,11 +123,11 @@
     <Compile Include="FrmLoginDone\ResetPW.Designer.cs">
       <DependentUpon>ResetPW.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\uc_Excel.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="UI\InHoaDon.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UI\uc_Excel.Designer.cs">
-      <DependentUpon>uc_Excel.cs</DependentUpon>
+    <Compile Include="UI\InHoaDon.Designer.cs">
+      <DependentUpon>InHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\uc_HoaDon.cs">
       <SubType>UserControl</SubType>
@@ -157,12 +171,7 @@
     <Compile Include="UI\uc_ThueThietBi.Designer.cs">
       <DependentUpon>uc_ThueThietBi.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\CT_PhieuThue.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\CT_PhieuThue.Designer.cs">
-      <DependentUpon>CT_PhieuThue.cs</DependentUpon>
-    </Compile>
+    <Compile Include="XuatExcel.cs" />
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,12 +190,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="FrmLoginDone\ResetPW.resx">
       <DependentUpon>ResetPW.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\uc_Excel.resx">
-      <DependentUpon>uc_Excel.cs</DependentUpon>
+    <EmbeddedResource Include="UI\InHoaDon.resx">
+      <DependentUpon>InHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\uc_HoaDon.resx">
       <DependentUpon>uc_HoaDon.cs</DependentUpon>
@@ -209,9 +219,6 @@
     <EmbeddedResource Include="UI\uc_ThueThietBi.resx">
       <DependentUpon>uc_ThueThietBi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\CT_PhieuThue.resx">
-      <DependentUpon>CT_PhieuThue.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -227,7 +234,9 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\logo MF black.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

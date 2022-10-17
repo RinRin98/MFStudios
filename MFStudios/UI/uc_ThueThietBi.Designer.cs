@@ -41,9 +41,12 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.grThongTinTB = new DevExpress.XtraEditors.GroupControl();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.lblTimKiem = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.lblSDT = new System.Windows.Forms.Label();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
@@ -76,8 +79,6 @@
             this.NGAYHENTRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GIATHUE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MAKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblTimKiem = new System.Windows.Forms.Label();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -109,9 +110,10 @@
             this.bbtnLuu,
             this.bbtnHuy,
             this.bbtnThoat,
-            this.barButtonItem7});
+            this.barButtonItem7,
+            this.barButtonItem1});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 7;
+            this.barManager1.MaxItemId = 8;
             // 
             // bar2
             // 
@@ -204,6 +206,11 @@
             this.barButtonItem7.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
             this.barButtonItem7.Name = "barButtonItem7";
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Id = 7;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -270,25 +277,48 @@
             this.grThongTinTB.TabIndex = 0;
             this.grThongTinTB.Text = "Thông Tin Thiết Bị";
             // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.txtTimKiem.Location = new System.Drawing.Point(612, 43);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(132, 22);
+            this.txtTimKiem.TabIndex = 0;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // lblTimKiem
+            // 
+            this.lblTimKiem.AutoSize = true;
+            this.lblTimKiem.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.lblTimKiem.Location = new System.Drawing.Point(503, 45);
+            this.lblTimKiem.Name = "lblTimKiem";
+            this.lblTimKiem.Size = new System.Drawing.Size(103, 14);
+            this.lblTimKiem.TabIndex = 0;
+            this.lblTimKiem.Text = "Tìm Kiếm Thiết Bị";
+            // 
             // txtSDT
             // 
             this.txtSDT.Enabled = false;
-            this.txtSDT.Location = new System.Drawing.Point(352, 119);
+            this.txtSDT.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.txtSDT.Location = new System.Drawing.Point(364, 119);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(132, 21);
+            this.txtSDT.Size = new System.Drawing.Size(144, 22);
             this.txtSDT.TabIndex = 1;
             // 
             // lblSDT
             // 
             this.lblSDT.AutoSize = true;
+            this.lblSDT.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lblSDT.Location = new System.Drawing.Point(260, 122);
             this.lblSDT.Name = "lblSDT";
-            this.lblSDT.Size = new System.Drawing.Size(73, 13);
+            this.lblSDT.Size = new System.Drawing.Size(83, 14);
             this.lblSDT.TabIndex = 0;
             this.lblSDT.Text = "Số Điện Thoại";
             // 
             // btnXoa
             // 
+            this.btnXoa.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.btnXoa.Appearance.Options.UseFont = true;
             this.btnXoa.Enabled = false;
             this.btnXoa.Location = new System.Drawing.Point(367, 225);
             this.btnXoa.Name = "btnXoa";
@@ -300,6 +330,8 @@
             // 
             // btnThem
             // 
+            this.btnThem.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.Enabled = false;
             this.btnThem.Location = new System.Drawing.Point(263, 225);
             this.btnThem.Name = "btnThem";
@@ -312,52 +344,59 @@
             // cbbTenKH
             // 
             this.cbbTenKH.Enabled = false;
+            this.cbbTenKH.Font = new System.Drawing.Font("Tahoma", 9F);
             this.cbbTenKH.FormattingEnabled = true;
-            this.cbbTenKH.Location = new System.Drawing.Point(352, 80);
+            this.cbbTenKH.Location = new System.Drawing.Point(364, 80);
             this.cbbTenKH.Name = "cbbTenKH";
-            this.cbbTenKH.Size = new System.Drawing.Size(132, 21);
+            this.cbbTenKH.Size = new System.Drawing.Size(144, 22);
             this.cbbTenKH.TabIndex = 3;
             this.cbbTenKH.SelectedIndexChanged += new System.EventHandler(this.cbbTenKH_SelectedIndexChanged);
             // 
             // dtpTra
             // 
+            this.dtpTra.Font = new System.Drawing.Font("Tahoma", 9F);
             this.dtpTra.Location = new System.Drawing.Point(128, 190);
             this.dtpTra.Name = "dtpTra";
-            this.dtpTra.Size = new System.Drawing.Size(200, 21);
+            this.dtpTra.Size = new System.Drawing.Size(223, 22);
             this.dtpTra.TabIndex = 2;
             this.dtpTra.TabStop = false;
             // 
             // txtMaKH
             // 
             this.txtMaKH.Enabled = false;
-            this.txtMaKH.Location = new System.Drawing.Point(352, 42);
+            this.txtMaKH.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.txtMaKH.Location = new System.Drawing.Point(364, 43);
             this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(132, 21);
+            this.txtMaKH.Size = new System.Drawing.Size(132, 22);
             this.txtMaKH.TabIndex = 1;
             // 
             // dtpThue
             // 
+            this.dtpThue.Enabled = false;
+            this.dtpThue.Font = new System.Drawing.Font("Tahoma", 9F);
             this.dtpThue.Location = new System.Drawing.Point(128, 151);
             this.dtpThue.Name = "dtpThue";
-            this.dtpThue.Size = new System.Drawing.Size(200, 21);
+            this.dtpThue.Size = new System.Drawing.Size(223, 22);
             this.dtpThue.TabIndex = 2;
             this.dtpThue.TabStop = false;
             // 
             // lblNgayHenTra
             // 
             this.lblNgayHenTra.AutoSize = true;
+            this.lblNgayHenTra.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lblNgayHenTra.Location = new System.Drawing.Point(36, 196);
             this.lblNgayHenTra.Name = "lblNgayHenTra";
-            this.lblNgayHenTra.Size = new System.Drawing.Size(73, 13);
+            this.lblNgayHenTra.Size = new System.Drawing.Size(82, 14);
             this.lblNgayHenTra.TabIndex = 0;
             this.lblNgayHenTra.Text = "Ngày Hẹn Trả";
             // 
             // txtGiaThue
             // 
             this.txtGiaThue.Enabled = false;
+            this.txtGiaThue.Font = new System.Drawing.Font("Tahoma", 9F);
             this.txtGiaThue.Location = new System.Drawing.Point(128, 227);
             this.txtGiaThue.Name = "txtGiaThue";
-            this.txtGiaThue.Size = new System.Drawing.Size(100, 21);
+            this.txtGiaThue.Size = new System.Drawing.Size(100, 22);
             this.txtGiaThue.TabIndex = 1;
             this.txtGiaThue.TabStop = false;
             this.txtGiaThue.TextChanged += new System.EventHandler(this.txtGiaThue_TextChanged);
@@ -365,90 +404,100 @@
             // lblMaKH
             // 
             this.lblMaKH.AutoSize = true;
+            this.lblMaKH.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lblMaKH.Location = new System.Drawing.Point(260, 45);
             this.lblMaKH.Name = "lblMaKH";
-            this.lblMaKH.Size = new System.Drawing.Size(81, 13);
+            this.lblMaKH.Size = new System.Drawing.Size(91, 14);
             this.lblMaKH.TabIndex = 0;
             this.lblMaKH.Text = "Mã Khách Hàng";
             // 
             // txtTenTB
             // 
             this.txtTenTB.Enabled = false;
+            this.txtTenTB.Font = new System.Drawing.Font("Tahoma", 9F);
             this.txtTenTB.Location = new System.Drawing.Point(128, 116);
             this.txtTenTB.Name = "txtTenTB";
-            this.txtTenTB.Size = new System.Drawing.Size(100, 21);
+            this.txtTenTB.Size = new System.Drawing.Size(126, 22);
             this.txtTenTB.TabIndex = 1;
             this.txtTenTB.TabStop = false;
             // 
             // lblTenKH
             // 
             this.lblTenKH.AutoSize = true;
+            this.lblTenKH.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lblTenKH.Location = new System.Drawing.Point(260, 83);
             this.lblTenKH.Name = "lblTenKH";
-            this.lblTenKH.Size = new System.Drawing.Size(85, 13);
+            this.lblTenKH.Size = new System.Drawing.Size(98, 14);
             this.lblTenKH.TabIndex = 0;
             this.lblTenKH.Text = "Tên Khách Hàng";
             // 
             // txtMaTB
             // 
             this.txtMaTB.Enabled = false;
+            this.txtMaTB.Font = new System.Drawing.Font("Tahoma", 9F);
             this.txtMaTB.Location = new System.Drawing.Point(128, 80);
             this.txtMaTB.Name = "txtMaTB";
-            this.txtMaTB.Size = new System.Drawing.Size(100, 21);
+            this.txtMaTB.Size = new System.Drawing.Size(100, 22);
             this.txtMaTB.TabIndex = 1;
             this.txtMaTB.TabStop = false;
             // 
             // txtMaHD
             // 
             this.txtMaHD.Enabled = false;
+            this.txtMaHD.Font = new System.Drawing.Font("Tahoma", 9F);
             this.txtMaHD.Location = new System.Drawing.Point(128, 43);
             this.txtMaHD.Name = "txtMaHD";
-            this.txtMaHD.Size = new System.Drawing.Size(100, 21);
+            this.txtMaHD.Size = new System.Drawing.Size(100, 22);
             this.txtMaHD.TabIndex = 1;
             this.txtMaHD.TabStop = false;
             // 
             // lblMaTB
             // 
             this.lblMaTB.AutoSize = true;
+            this.lblMaTB.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lblMaTB.Location = new System.Drawing.Point(37, 83);
             this.lblMaTB.Name = "lblMaTB";
-            this.lblMaTB.Size = new System.Drawing.Size(59, 13);
+            this.lblMaTB.Size = new System.Drawing.Size(68, 14);
             this.lblMaTB.TabIndex = 0;
             this.lblMaTB.Text = "Mã Thiết Bị";
             // 
             // lblTenTB
             // 
             this.lblTenTB.AutoSize = true;
+            this.lblTenTB.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lblTenTB.Location = new System.Drawing.Point(37, 119);
             this.lblTenTB.Name = "lblTenTB";
-            this.lblTenTB.Size = new System.Drawing.Size(63, 13);
+            this.lblTenTB.Size = new System.Drawing.Size(75, 14);
             this.lblTenTB.TabIndex = 0;
             this.lblTenTB.Text = "Tên Thiết Bị";
             // 
             // lblGiaThue
             // 
             this.lblGiaThue.AutoSize = true;
+            this.lblGiaThue.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lblGiaThue.Location = new System.Drawing.Point(36, 235);
             this.lblGiaThue.Name = "lblGiaThue";
-            this.lblGiaThue.Size = new System.Drawing.Size(49, 13);
+            this.lblGiaThue.Size = new System.Drawing.Size(56, 14);
             this.lblGiaThue.TabIndex = 0;
             this.lblGiaThue.Text = "Giá Thuê";
             // 
             // lblNgayThue
             // 
             this.lblNgayThue.AutoSize = true;
+            this.lblNgayThue.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lblNgayThue.Location = new System.Drawing.Point(36, 157);
             this.lblNgayThue.Name = "lblNgayThue";
-            this.lblNgayThue.Size = new System.Drawing.Size(59, 13);
+            this.lblNgayThue.Size = new System.Drawing.Size(67, 14);
             this.lblNgayThue.TabIndex = 0;
             this.lblNgayThue.Text = "Ngày Thuê";
             // 
             // lblMaHD
             // 
             this.lblMaHD.AutoSize = true;
+            this.lblMaHD.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lblMaHD.Location = new System.Drawing.Point(37, 46);
             this.lblMaHD.Name = "lblMaHD";
-            this.lblMaHD.Size = new System.Drawing.Size(66, 13);
+            this.lblMaHD.Size = new System.Drawing.Size(73, 14);
             this.lblMaHD.TabIndex = 0;
             this.lblMaHD.Text = "Mã Hóa Đơn";
             // 
@@ -556,23 +605,6 @@
             this.MAKH.ReadOnly = true;
             this.MAKH.Visible = false;
             // 
-            // lblTimKiem
-            // 
-            this.lblTimKiem.AutoSize = true;
-            this.lblTimKiem.Location = new System.Drawing.Point(503, 45);
-            this.lblTimKiem.Name = "lblTimKiem";
-            this.lblTimKiem.Size = new System.Drawing.Size(86, 13);
-            this.lblTimKiem.TabIndex = 0;
-            this.lblTimKiem.Text = "Tìm Kiếm Thiết Bị";
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(595, 42);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(132, 21);
-            this.txtTimKiem.TabIndex = 0;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
-            // 
             // uc_ThueThietBi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -657,5 +689,6 @@
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label lblTimKiem;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }
 }

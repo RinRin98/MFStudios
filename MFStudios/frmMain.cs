@@ -32,7 +32,7 @@ namespace MFStudios
             PhanQuyen();
             try
             {
-                SqlConnection con = new SqlConnection("Data Source=RIN\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
+                SqlConnection con = new SqlConnection("Data Source=DESKTOP-OKIVOU5\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
                 SqlCommand cmd = new SqlCommand("Select HOTEN,  MACV from NHANVIEN where MaNV ='" + MaNV + "' ", con);
                 con.Open();
                 dt = cmd.ExecuteReader();
@@ -55,7 +55,7 @@ namespace MFStudios
 
         public void PhanQuyen()
         {
-            SqlConnection con = new SqlConnection("Data Source=RIN\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-OKIVOU5\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
             SqlCommand cmd = new SqlCommand("Select HOTEN,  MACV from NHANVIEN where MaNV ='" + MaNV + "' ", con);
             con.Open();
             SqlDataReader dc = null;
@@ -84,6 +84,7 @@ namespace MFStudios
         uc_KhachHang ucKhachHang;
         uc_ThueThietBi ucThueThietBi;
         uc_HoaDon ucHoaDon;
+        uc_ThongKe ucThongKe;
         private void aceNhanVien_Click(object sender, EventArgs e)
         {
             if (ucNhanVien == null)
@@ -192,6 +193,40 @@ namespace MFStudios
             LoginForm lg = new LoginForm();
             this.Close();
             lg.Show();
+        }
+
+        private void aceThongKe_Click(object sender, EventArgs e)
+        {
+            if (ucThongKe == null)
+            {
+                ucThongKe = new uc_ThongKe();
+                ucThongKe.Dock = DockStyle.Fill;
+                mainContainer.Controls.Add(ucThongKe);
+                ucThongKe.BringToFront();
+            }
+            else
+            {
+                ucThongKe.BringToFront();
+            }
+            lblTieuDe.Caption = aceThongKe.Text;
+        }
+
+        private void aceThongTin_Click(object sender, EventArgs e)
+        {
+            string currentYear = DateTime.Now.Year.ToString();
+            String tt = "";
+            tt += "Phần mềm : Quản lý Thuê Thiết Bị MFStudios  \n";
+            tt += "\n\n";
+            tt += " Học phần : Lập trình trên môi trường Windows";
+            tt += "\t";
+            tt += "\n\n";
+            tt += "____Đồ án Môn học____";
+            tt += "\n";
+            tt += "\nSinh viên thực hiện : - Trần Thiên Phúc, Nguyễn Xuân Toản, Nguyễn Quốc Tường, Trần Duy Anh";
+            tt += "\nVersion : 1.1 @ năm " + currentYear + "  \n\n";
+            tt += "Liên hệ để được hỗ trợ : 0896416809";
+            tt += "\n";
+            MessageBox.Show((tt), "Thông tin", MessageBoxButtons.OK);
         }
     }
 }

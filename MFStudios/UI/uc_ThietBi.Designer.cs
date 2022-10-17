@@ -193,10 +193,12 @@
             // 
             // cbbLoaiTB
             // 
+            this.cbbLoaiTB.Enabled = false;
+            this.cbbLoaiTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbLoaiTB.FormattingEnabled = true;
             this.cbbLoaiTB.Location = new System.Drawing.Point(496, 118);
             this.cbbLoaiTB.Name = "cbbLoaiTB";
-            this.cbbLoaiTB.Size = new System.Drawing.Size(121, 21);
+            this.cbbLoaiTB.Size = new System.Drawing.Size(121, 23);
             this.cbbLoaiTB.TabIndex = 3;
             this.cbbLoaiTB.TabStop = false;
             // 
@@ -205,58 +207,75 @@
             this.txtTimKiem.EditValue = "";
             this.txtTimKiem.Location = new System.Drawing.Point(368, 209);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(130, 20);
-            this.txtTimKiem.TabIndex = 7;
+            this.txtTimKiem.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Properties.Appearance.Options.UseFont = true;
+            this.txtTimKiem.Size = new System.Drawing.Size(130, 22);
+            this.txtTimKiem.TabIndex = 4;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // txtGiaThue
             // 
             this.txtGiaThue.EditValue = "";
+            this.txtGiaThue.Enabled = false;
             this.txtGiaThue.Location = new System.Drawing.Point(496, 79);
             this.txtGiaThue.Name = "txtGiaThue";
-            this.txtGiaThue.Size = new System.Drawing.Size(198, 20);
-            this.txtGiaThue.TabIndex = 7;
+            this.txtGiaThue.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGiaThue.Properties.Appearance.Options.UseFont = true;
+            this.txtGiaThue.Size = new System.Drawing.Size(198, 22);
+            this.txtGiaThue.TabIndex = 2;
             // 
             // lblTimKiem
             // 
+            this.lblTimKiem.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimKiem.Appearance.Options.UseFont = true;
             this.lblTimKiem.Location = new System.Drawing.Point(272, 213);
             this.lblTimKiem.Name = "lblTimKiem";
-            this.lblTimKiem.Size = new System.Drawing.Size(54, 13);
+            this.lblTimKiem.Size = new System.Drawing.Size(65, 15);
             this.lblTimKiem.TabIndex = 0;
             this.lblTimKiem.Text = "Tìm Thiết Bị";
             // 
             // lblGiaThue
             // 
+            this.lblGiaThue.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiaThue.Appearance.Options.UseFont = true;
             this.lblGiaThue.Location = new System.Drawing.Point(400, 83);
             this.lblGiaThue.Name = "lblGiaThue";
-            this.lblGiaThue.Size = new System.Drawing.Size(42, 13);
+            this.lblGiaThue.Size = new System.Drawing.Size(50, 15);
             this.lblGiaThue.TabIndex = 0;
             this.lblGiaThue.Text = "Giá Thuê";
             // 
             // txtGiaTri
             // 
             this.txtGiaTri.EditValue = "";
+            this.txtGiaTri.Enabled = false;
             this.txtGiaTri.Location = new System.Drawing.Point(496, 42);
             this.txtGiaTri.Name = "txtGiaTri";
-            this.txtGiaTri.Size = new System.Drawing.Size(198, 20);
-            this.txtGiaTri.TabIndex = 4;
+            this.txtGiaTri.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGiaTri.Properties.Appearance.Options.UseFont = true;
+            this.txtGiaTri.Size = new System.Drawing.Size(198, 22);
+            this.txtGiaTri.TabIndex = 1;
             // 
             // txtMaTB
             // 
             this.txtMaTB.Enabled = false;
             this.txtMaTB.Location = new System.Drawing.Point(176, 42);
             this.txtMaTB.Name = "txtMaTB";
+            this.txtMaTB.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaTB.Properties.Appearance.Options.UseFont = true;
             this.txtMaTB.Properties.ReadOnly = true;
-            this.txtMaTB.Size = new System.Drawing.Size(100, 20);
+            this.txtMaTB.Size = new System.Drawing.Size(100, 22);
             this.txtMaTB.TabIndex = 1;
             this.txtMaTB.TabStop = false;
             // 
             // txtTenThietBi
             // 
+            this.txtTenThietBi.Enabled = false;
             this.txtTenThietBi.Location = new System.Drawing.Point(176, 82);
             this.txtTenThietBi.MenuManager = this.barManager2;
             this.txtTenThietBi.Name = "txtTenThietBi";
-            this.txtTenThietBi.Size = new System.Drawing.Size(100, 20);
+            this.txtTenThietBi.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenThietBi.Properties.Appearance.Options.UseFont = true;
+            this.txtTenThietBi.Size = new System.Drawing.Size(100, 22);
             this.txtTenThietBi.TabIndex = 0;
             // 
             // barManager2
@@ -409,33 +428,41 @@
             // 
             // lblLoaiThietBi
             // 
+            this.lblLoaiThietBi.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoaiThietBi.Appearance.Options.UseFont = true;
             this.lblLoaiThietBi.Location = new System.Drawing.Point(400, 121);
             this.lblLoaiThietBi.Name = "lblLoaiThietBi";
-            this.lblLoaiThietBi.Size = new System.Drawing.Size(57, 13);
+            this.lblLoaiThietBi.Size = new System.Drawing.Size(68, 15);
             this.lblLoaiThietBi.TabIndex = 0;
             this.lblLoaiThietBi.Text = "Loại Thiết Bị";
             // 
             // lblGiaTri
             // 
+            this.lblGiaTri.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiaTri.Appearance.Options.UseFont = true;
             this.lblGiaTri.Location = new System.Drawing.Point(400, 45);
             this.lblGiaTri.Name = "lblGiaTri";
-            this.lblGiaTri.Size = new System.Drawing.Size(30, 13);
+            this.lblGiaTri.Size = new System.Drawing.Size(36, 15);
             this.lblGiaTri.TabIndex = 0;
             this.lblGiaTri.Text = "Giá Trị";
             // 
             // lblMaTB
             // 
+            this.lblMaTB.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaTB.Appearance.Options.UseFont = true;
             this.lblMaTB.Location = new System.Drawing.Point(80, 45);
             this.lblMaTB.Name = "lblMaTB";
-            this.lblMaTB.Size = new System.Drawing.Size(52, 13);
+            this.lblMaTB.Size = new System.Drawing.Size(62, 15);
             this.lblMaTB.TabIndex = 0;
             this.lblMaTB.Text = "Mã Thiết Bị";
             // 
             // lblTenTB
             // 
+            this.lblTenTB.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenTB.Appearance.Options.UseFont = true;
             this.lblTenTB.Location = new System.Drawing.Point(80, 85);
             this.lblTenTB.Name = "lblTenTB";
-            this.lblTenTB.Size = new System.Drawing.Size(56, 13);
+            this.lblTenTB.Size = new System.Drawing.Size(65, 15);
             this.lblTenTB.TabIndex = 0;
             this.lblTenTB.Text = "Tên Thiết Bị";
             // 

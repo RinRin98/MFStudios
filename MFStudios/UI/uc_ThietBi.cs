@@ -15,7 +15,7 @@ namespace MFStudios.UI
 {
     public partial class uc_ThietBi : UserControl
     {
-        public static string con = @"Data Source=RIN\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
+        public static string con = @"Data Source=DESKTOP-OKIVOU5\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
         public uc_ThietBi()
         {
             InitializeComponent();
@@ -50,7 +50,7 @@ namespace MFStudios.UI
                 dgvThietBi.Rows[row].Cells[1].Value = s.TENTB;
                 dgvThietBi.Rows[row].Cells[2].Value = s.GIATRITB;
                 dgvThietBi.Rows[row].Cells[3].Value = s.GIATHUE;
-                dgvThietBi.Rows[row].Cells[4].Value = s.LOAITHIETBI.TENLOAI;
+                dgvThietBi.Rows[row].Cells[4].Value = s.MALOAI;
 
             }
         }
@@ -67,6 +67,7 @@ namespace MFStudios.UI
                     context.THIETBIs.Remove(find);
                     context.SaveChanges();
                     MessageBox.Show("Xóa thiết bị thành công!", "Thông Báo", MessageBoxButtons.OK);
+                    clear();
                 }
             }
             else
@@ -87,7 +88,7 @@ namespace MFStudios.UI
             
                 txtGiaTri.Text = dgvThietBi.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
                 txtGiaThue.Text = dgvThietBi.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
-                cbbLoaiTB.Text = dgvThietBi.Rows[e.RowIndex].Cells[4].FormattedValue.ToString();
+                cbbLoaiTB.SelectedValue = dgvThietBi.Rows[e.RowIndex].Cells[4].FormattedValue.ToString();
 
                 txtMaTB.Enabled = false;
                 bbtnThemTB.Enabled = true;
@@ -114,7 +115,7 @@ namespace MFStudios.UI
         }
         public string TangMa()
         {
-            if (KetNoi("RIN\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
+            if (KetNoi("DESKTOP-OKIVOU5\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
             //if (KetNoi("MSI\\SQLEXPRESS", "DBMFSTUDIOS") == false)            //link DATABASE TRAN THIEN PHUC
             {
                 MessageBox.Show("Nhấn OK để thoát chương trình", "Không kết nối được CSDL!", MessageBoxButtons.OK, MessageBoxIcon.Question);
@@ -133,13 +134,12 @@ namespace MFStudios.UI
         }
         public void clear()
         {
-
             txtMaTB.Text = "";
-            txtTenThietBi.Focus();
-         
+            txtTenThietBi.Text = "";
+            txtTenThietBi.Focus();  
             txtGiaTri.Text = "";
             txtGiaThue.Text = "";
-            cbbLoaiTB.SelectedValue = "";
+            cbbLoaiTB.SelectedIndex = 1;
         }
 
         private void bbtnThemTB_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -148,6 +148,10 @@ namespace MFStudios.UI
             bbtnThemTB.Enabled = true;
             bbtnLuuTB.Enabled = true;
             txtMaTB.Text = TangMa();
+            txtTenThietBi.Enabled = true;
+            txtGiaThue.Enabled = true;
+            txtGiaTri.Enabled = true;
+            cbbLoaiTB.Enabled = true;
             txtMaTB.Focus();
         }
 
@@ -163,42 +167,48 @@ namespace MFStudios.UI
             {
 
                 if (txtTenThietBi.Text == "" ||
-                
+
                 txtGiaTri.Text == "" ||
                 txtGiaThue.Text == "" ||
                 cbbLoaiTB.Text == "")
                 {
                     MessageBox.Show("Bạn chưa nhập đầy đủ thông Tin !", "Error", MessageBoxButtons.OK);
                 }
-                DBMFStudios context = new DBMFStudios();
-                LOAITHIETBI temp = cbbLoaiTB.SelectedItem as LOAITHIETBI;
-                THIETBI find = context.THIETBIs.FirstOrDefault(p => p.MATB == txtMaTB.Text);
-                if (find == null)
+                else if (float.Parse(txtGiaTri.Text) < float.Parse(txtGiaThue.Text))
                 {
-                    THIETBI tb = new THIETBI();
-                    tb.MATB = TangMa();
-                    tb.TENTB = txtTenThietBi.Text;
-                  
-                    tb.GIATRITB = int.Parse(txtGiaTri.Text);
-                    tb.GIATHUE = int.Parse(txtGiaThue.Text);
-                    tb.MALOAI = temp.MALOAI;
-                    context.THIETBIs.Add(tb);
-                    context.SaveChanges();
-                    MessageBox.Show("Thêm Thiết Bị thành công!");
+                    MessageBox.Show("Vui lòng nhập lại giá trị sản phẩm và giá thuê!", "Thông Báo");
                 }
                 else
                 {
-                    find.TENTB = txtTenThietBi.Text;
-                 
-                    find.GIATRITB = int.Parse(txtGiaTri.Text);
-                    find.GIATHUE = int.Parse(txtGiaThue.Text);
-                    find.MALOAI = temp.MALOAI;
-                    context.THIETBIs.AddOrUpdate(find);
-                    context.SaveChanges();
-                    MessageBox.Show("Update Thiết Bị thành công!");
+
+                    DBMFStudios context = new DBMFStudios();
+                    LOAITHIETBI temp = cbbLoaiTB.SelectedItem as LOAITHIETBI;
+                    THIETBI find = context.THIETBIs.FirstOrDefault(p => p.MATB == txtMaTB.Text);
+                    if (find == null)
+                    {
+                        THIETBI tb = new THIETBI();
+                        tb.MATB = TangMa();
+                        tb.TENTB = txtTenThietBi.Text;
+                        tb.GIATRITB = int.Parse(txtGiaTri.Text);
+                        tb.GIATHUE = int.Parse(txtGiaThue.Text);
+                        tb.MALOAI = temp.MALOAI;
+                        context.THIETBIs.Add(tb);
+                        context.SaveChanges();
+                        MessageBox.Show("Thêm Thiết Bị thành công!");
+                    }
+                    else
+                    {
+                        find.TENTB = txtTenThietBi.Text;
+                        find.GIATRITB = int.Parse(txtGiaTri.Text);
+                        find.GIATHUE = int.Parse(txtGiaThue.Text);
+                        find.MALOAI = temp.MALOAI;
+                        context.THIETBIs.AddOrUpdate(find);
+                        context.SaveChanges();
+                        MessageBox.Show("Update Thiết Bị thành công!");
+                    }
+                    BindGird(context.THIETBIs.ToList());
+                    clear();
                 }
-                BindGird(context.THIETBIs.ToList());
-                clear();
 
             }
             catch (Exception ex)

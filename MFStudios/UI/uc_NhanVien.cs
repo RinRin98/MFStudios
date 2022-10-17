@@ -22,7 +22,7 @@ namespace MFStudios.UI
     public partial class uc_NhanVien : UserControl
     {
 
-        public static string con = @"Data Source=RIN\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
+        public static string con = @"Data Source=DESKTOP-OKIVOU5\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
         public uc_NhanVien()
         {
             InitializeComponent();
@@ -126,7 +126,7 @@ namespace MFStudios.UI
         }
         public string TangMa()
         {
-            if (KetNoi("RIN\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
+            if (KetNoi("DESKTOP-OKIVOU5\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
             //if (KetNoi("MSI\\SQLEXPRESS", "DBMFSTUDIOS") == false)            //link DATABASE TRAN THIEN PHUC
             {
                 MessageBox.Show("Nhấn OK để thoát chương trình", "Không kết nối được CSDL!", MessageBoxButtons.OK, MessageBoxIcon.Question);

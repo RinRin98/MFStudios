@@ -22,7 +22,7 @@ namespace MFStudios.UI
     public partial class uc_ThueThietBi : UserControl
     {
         string MaNV = LoginForm.getUserlogin;
-        public static SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-OKIVOU5\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
+        public static SqlConnection con = new SqlConnection(@"Data Source=RIN\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
         public uc_ThueThietBi()
         {
             InitializeComponent();
@@ -60,7 +60,7 @@ namespace MFStudios.UI
 
         private void cbbTenKH_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string con = "Data Source=DESKTOP-OKIVOU5\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
+            string con = "Data Source=RIN\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
             string ad = "select * from KHACHHANG where TENKH = @TENKH";
             using (SqlConnection conDataBase = new SqlConnection(con))
             using (SqlCommand cmdDataBase = new SqlCommand(ad, conDataBase))
@@ -104,7 +104,7 @@ namespace MFStudios.UI
         }
         public string TangMa()
         {
-            if (KetNoi("DESKTOP-OKIVOU5\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
+            if (KetNoi("RIN\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
             //if (KetNoi("MSI\\SQLEXPRESS", "DBMFSTUDIOS") == false)            //link DATABASE TRAN THIEN PHUC
             {
                 MessageBox.Show("Nhấn OK để thoát chương trình", "Không kết nối được CSDL!", MessageBoxButtons.OK, MessageBoxIcon.Question);
@@ -157,7 +157,11 @@ namespace MFStudios.UI
         {
             try
             {
-                if (dgvPhieuThueTB.RowCount == null)
+                if (dtpThue.Value.Date > dtpTra.Value.Date)
+                {
+                    MessageBox.Show("Lỗi nhập ngày mời nhập lại!", "Thông báo");
+                }
+                else if (dgvPhieuThueTB.RowCount == null)
                 {
                     btnXoa.Enabled = false;
                 }
@@ -217,6 +221,7 @@ namespace MFStudios.UI
         private void bbtnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             clear();
+            cbbTenKH.Refresh();
             bbtnThem.Enabled = true;
             bbtnLuu.Enabled = true;
             btnThem.Enabled = true;
@@ -230,9 +235,9 @@ namespace MFStudios.UI
             {
                 int selectedRow = GetSelectedRow(txtMaTB.Text);
                 int currrow = dgvPhieuThueTB.CurrentRow.Index;
-                if (selectedRow == 0)
+                if (selectedRow == -1)
                 {
-                    throw new Exception("Không tìm thấy Thiết Bị cần xóa!");
+                    throw new Exception("Không tìm thấy Thiết Bị thuê cần xóa!");
                 }
                 else
                 {
@@ -242,7 +247,7 @@ namespace MFStudios.UI
                         dgvPhieuThueTB.Rows.RemoveAt(selectedRow);
                         currrow = dgvThietBi.Rows.Add();
                         InsertUpdateTHIETBI(currrow);
-                        MessageBox.Show("Xóa Thiết Bị thành công!", "Thông Báo!!!", MessageBoxButtons.OK);
+                        MessageBox.Show("Xóa Thiết Bị thuê thành công!", "Thông Báo!!!", MessageBoxButtons.OK);
                     }
 
                 }
@@ -274,11 +279,8 @@ namespace MFStudios.UI
 
             try
             {
-                if (dtpThue.Value.Date > dtpTra.Value.Date)
-                {
-                    MessageBox.Show("Lỗi nhập ngày mời nhập lại!", "Thông báo");
-                }
-                else if (dgvPhieuThueTB.RowCount == 0)
+                
+                if (dgvPhieuThueTB.RowCount == 0)
                 {
                     MessageBox.Show("Danh sách trống không thể Lưu Hóa ĐƠNNNNN!");
                 }

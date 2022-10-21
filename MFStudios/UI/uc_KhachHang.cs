@@ -20,7 +20,7 @@ namespace MFStudios.UI
         {
             InitializeComponent();
         }
-        public static string con = @"Data Source=DESKTOP-OKIVOU5\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
+        public static string con = @"Data Source=RIN\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
 
         private void uc_KhachHang_Load(object sender, EventArgs e)
         {
@@ -52,23 +52,30 @@ namespace MFStudios.UI
 
         private void bbtnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            DBMFStudios context = new DBMFStudios();
-            KHACHHANG find = context.KHACHHANGs.FirstOrDefault(p => p.MAKH == txtMaKH.Text);
-            if (find != null)
+            try
             {
-                DialogResult dr = MessageBox.Show("Bạn có muốn xóa ?", "YES/NO", MessageBoxButtons.YesNo);
-                if (dr == DialogResult.Yes)
+                DBMFStudios context = new DBMFStudios();
+                KHACHHANG find = context.KHACHHANGs.FirstOrDefault(p => p.MAKH == txtMaKH.Text);
+                if (find != null)
                 {
-                    context.KHACHHANGs.Remove(find);
-                    context.SaveChanges();
-                    MessageBox.Show("Xóa sinh viên thành công!", "Thông Báo", MessageBoxButtons.OK);
+                    DialogResult dr = MessageBox.Show("Bạn có muốn xóa ?", "YES/NO", MessageBoxButtons.YesNo);
+                    if (dr == DialogResult.Yes)
+                    {
+                        context.KHACHHANGs.Remove(find);
+                        context.SaveChanges();
+                        MessageBox.Show("Xóa Khách Hàng thành công!", "Thông Báo", MessageBoxButtons.OK);
+                    }
                 }
+                else
+                {
+                    MessageBox.Show("Không Tìm thấy Khách Hàng cần xóa!");
+                }
+                BindGird(context.KHACHHANGs.ToList());
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Không Tìm thấy nhân viên cần xóa!");
+                MessageBox.Show("Khách hàng đã có hóa đơn thanh toán, Không được xóa!", "Thông báo", MessageBoxButtons.OK);
             }
-            BindGird(context.KHACHHANGs.ToList());
         }
 
         private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -106,7 +113,7 @@ namespace MFStudios.UI
 
         public string TangMa()
         {
-            if (KetNoi("DESKTOP-OKIVOU5\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
+            if (KetNoi("RIN\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
             //if (KetNoi("MSI\\SQLEXPRESS", "DBMFSTUDIOS") == false)            //link DATABASE TRAN THIEN PHUC
             {
                 MessageBox.Show("Nhấn OK để thoát chương trình", "Không kết nối được CSDL!", MessageBoxButtons.OK, MessageBoxIcon.Question);
@@ -168,7 +175,7 @@ namespace MFStudios.UI
             {
                 if (kiemtrasodienthoai(txtSDT.Text) == false)
                 {
-                    MessageBox.Show("Sai định dạng số Email!", "Thông báo");
+                    MessageBox.Show("Sai định dạng số điện thoại!", "Thông báo");
                     return;
                 }
                 if (kiemtraMail(txtEmail.Text) == false)

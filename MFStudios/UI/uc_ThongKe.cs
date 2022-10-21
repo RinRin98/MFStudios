@@ -20,7 +20,7 @@ namespace MFStudios.UI
         {
             InitializeComponent();
         }
-        public static SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-OKIVOU5\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
+        public static SqlConnection con = new SqlConnection(@"Data Source=RIN\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
         public bool KetNoi(string server, string database)
         {
             try
@@ -55,7 +55,7 @@ namespace MFStudios.UI
         }
         private void bbtnTKTN_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (KetNoi("DESKTOP-OKIVOU5\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
+            if (KetNoi("RIN\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
             //if (KetNoi("MSI\\SQLEXPRESS", "DBMFSTUDIOS") == false)            //link DATABASE TRAN THIEN PHUC
             {
                 MessageBox.Show("Nhấn OK để thoát chương trình", "Không kết nối được CSDL!", MessageBoxButtons.OK, MessageBoxIcon.Question);
@@ -86,7 +86,7 @@ namespace MFStudios.UI
 
         private void bbtnTKTT_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (KetNoi("DESKTOP-OKIVOU5\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
+            if (KetNoi("RIN\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
             //if (KetNoi("MSI\\SQLEXPRESS", "DBMFSTUDIOS") == false)            //link DATABASE TRAN THIEN PHUC
             {
                 MessageBox.Show("Nhấn OK để thoát chương trình", "Không kết nối được CSDL!", MessageBoxButtons.OK, MessageBoxIcon.Question);
@@ -119,7 +119,7 @@ namespace MFStudios.UI
 
         private void txtTim_TextChanged(object sender, EventArgs e)
         {
-            if(KetNoi("DESKTOP-OKIVOU5\\SQLEXPRESS", "DBMFSTUDIOS"))
+            if(KetNoi("RIN\\SQLEXPRESS", "DBMFSTUDIOS"))
             {
                 string maHD = txtTim.Text.Trim();
                 if (maHD == "")
@@ -135,7 +135,7 @@ namespace MFStudios.UI
         }
         private void uc_ThongKe_Load(object sender, EventArgs e)
         {
-            if (KetNoi("DESKTOP-OKIVOU5\\SQLEXPRESS", "DBMFSTUDIOS") == false)
+            if (KetNoi("RIN\\SQLEXPRESS", "DBMFSTUDIOS") == false)
             {
                 MessageBox.Show("Bấm OK để thoát", "Kết nối không thành công", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
@@ -156,7 +156,7 @@ namespace MFStudios.UI
 
         private void dtpNgay_ValueChanged(object sender, EventArgs e)
         {
-            if (KetNoi("DESKTOP-OKIVOU5\\SQLEXPRESS", "DBMFSTUDIOS"))
+            if (KetNoi("RIN\\SQLEXPRESS", "DBMFSTUDIOS"))
             {
                 DateTime ngay = DateTime.Parse(dtpNgay.Value.ToShortDateString());
                 string query = "Select * from HOADON where NGAYHENTRA='" + ngay + "'";

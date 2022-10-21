@@ -49,6 +49,7 @@
             this.txtsendUser = new DevExpress.XtraEditors.TextEdit();
             this.pctVerifyCode = new DevExpress.XtraEditors.PictureEdit();
             this.pctSendCode = new DevExpress.XtraEditors.PictureEdit();
+            this.lblBack = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo.Properties)).BeginInit();
@@ -241,6 +242,7 @@
             this.grbSendCode.BackColor = System.Drawing.Color.White;
             this.grbSendCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.grbSendCode.CausesValidation = false;
+            this.grbSendCode.Controls.Add(this.lblBack);
             this.grbSendCode.Controls.Add(this.lblVerify);
             this.grbSendCode.Controls.Add(this.lblverifyCode);
             this.grbSendCode.Controls.Add(this.txtCode);
@@ -350,6 +352,17 @@
             this.pctSendCode.TabStop = true;
             this.pctSendCode.Click += new System.EventHandler(this.pctSendCode_Click);
             // 
+            // lblBack
+            // 
+            this.lblBack.AutoSize = true;
+            this.lblBack.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBack.Location = new System.Drawing.Point(210, 276);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Size = new System.Drawing.Size(45, 14);
+            this.lblBack.TabIndex = 26;
+            this.lblBack.Text = "Trở Về";
+            this.lblBack.Click += new System.EventHandler(this.lblBack_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -407,5 +420,6 @@
         private DevExpress.XtraEditors.TextEdit txtsendUser;
         private DevExpress.XtraEditors.PictureEdit pctVerifyCode;
         private DevExpress.XtraEditors.PictureEdit pctSendCode;
+        private System.Windows.Forms.Label lblBack;
     }
 }

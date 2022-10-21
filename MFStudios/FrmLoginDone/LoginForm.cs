@@ -30,7 +30,7 @@ namespace MFStudios
         {
             Thread frmStart = new Thread(new ThreadStart(StartForm));
             frmStart.Start();
-            Thread.Sleep(5000);
+            Thread.Sleep(4000);
             InitializeComponent();
             frmStart.Abort();
             txtPass.UseSystemPasswordChar = false;
@@ -68,7 +68,7 @@ namespace MFStudios
             {
                 try
                 {
-                    SqlConnection con = new SqlConnection("Data Source=DESKTOP-OKIVOU5\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
+                    SqlConnection con = new SqlConnection("Data Source=RIN\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
                     SqlCommand cmd = new SqlCommand("Select * from NhanVien where MaNV = @MaNV and pass = @pass", con);
                     cmd.Parameters.AddWithValue("@MaNV", txtUserName.Text);
                     cmd.Parameters.AddWithValue("@pass", txtPass.Text);
@@ -118,7 +118,7 @@ namespace MFStudios
                     smtp.EnableSsl = true;
                     smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                     smtp.UseDefaultCredentials = false;
-                    smtp.Credentials = new System.Net.NetworkCredential("security@mfstudios.vn", "MF@@130622mf");
+                    smtp.Credentials = new System.Net.NetworkCredential("security@mfstudios.vn", "1234561");
                     smtp.Host = "pro51.emailserver.vn";
                     toemail = find.EMAIL;
                     MailMessage message = new MailMessage();
@@ -157,6 +157,12 @@ namespace MFStudios
             {
                 MessageBox.Show("Wrong Verify Code");
             }
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            grbSendCode.Visible = false;
+            grbLogin.Visible = true;
         }
     }
 

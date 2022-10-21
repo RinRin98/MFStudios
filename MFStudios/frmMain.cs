@@ -32,7 +32,7 @@ namespace MFStudios
             PhanQuyen();
             try
             {
-                SqlConnection con = new SqlConnection("Data Source=DESKTOP-OKIVOU5\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
+                SqlConnection con = new SqlConnection("Data Source=RIN\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
                 SqlCommand cmd = new SqlCommand("Select HOTEN,  MACV from NHANVIEN where MaNV ='" + MaNV + "' ", con);
                 con.Open();
                 dt = cmd.ExecuteReader();
@@ -55,7 +55,7 @@ namespace MFStudios
 
         public void PhanQuyen()
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-OKIVOU5\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=RIN\\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True");
             SqlCommand cmd = new SqlCommand("Select HOTEN,  MACV from NHANVIEN where MaNV ='" + MaNV + "' ", con);
             con.Open();
             SqlDataReader dc = null;
@@ -72,8 +72,8 @@ namespace MFStudios
                 else if (CV == "NV")
                 {
                     aceNhanVien.Visible = false;
-                    aceThietBi.Visible = true;
-                    aceLoaiThietBi.Visible = true;
+                    aceThietBi.Visible = false;
+                    aceLoaiThietBi.Visible = false;
                 }
             }
         }
@@ -217,13 +217,13 @@ namespace MFStudios
             String tt = "";
             tt += "Phần mềm : Quản lý Thuê Thiết Bị MFStudios  \n";
             tt += "\n\n";
-            tt += " Học phần : Lập trình trên môi trường Windows";
+            tt += " Học phần : Công Nghệ Phần Mềm ";
             tt += "\t";
             tt += "\n\n";
             tt += "____Đồ án Môn học____";
             tt += "\n";
             tt += "\nSinh viên thực hiện : - Trần Thiên Phúc, Nguyễn Xuân Toản, Nguyễn Quốc Tường, Trần Duy Anh";
-            tt += "\nVersion : 1.1 @ năm " + currentYear + "  \n\n";
+            tt += "\nVersion : 1.1 năm " + currentYear + "  \n\n";
             tt += "Liên hệ để được hỗ trợ : 0896416809";
             tt += "\n";
             MessageBox.Show((tt), "Thông tin", MessageBoxButtons.OK);

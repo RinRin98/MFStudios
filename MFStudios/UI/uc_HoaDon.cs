@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,17 +15,19 @@ namespace MFStudios.UI
 {
     public partial class uc_HoaDon : UserControl
     {
-        DBMFStudios context = new DBMFStudios();
+        
         public uc_HoaDon()
         {
             InitializeComponent();
+            
         }
-
+        public static string con = @"Data Source=RIN\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
         private void uc_HoaDon_Load(object sender, EventArgs e)
         {
             try
             {
                 DBMFStudios context = new DBMFStudios();
+                var listHD = context.HOADONs.ToList();
                 BindGird(context.HOADONs.ToList());
             }
             catch (Exception ex)
@@ -84,7 +87,19 @@ namespace MFStudios.UI
                 Application.Exit();
         }
 
-        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        
+
+        
+
+        private void btnXuatHoaDon_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DBMFStudios context = new DBMFStudios();
+            var HoaDon = context.HOADONs.Where(p => p.MAHD == txtMaHD.Text).ToList();
+            InHoaDon ihd = new InHoaDon(HoaDon);
+            ihd.ShowPreview();
+        }
+
+        private void btnXuatExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             try
             {
@@ -102,20 +117,10 @@ namespace MFStudios.UI
                     MessageBox.Show("Xuất file thành công ", "Thông báo ", MessageBoxButtons.OK);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Không thể xuất file! Lỗi: " + ex.Message, "Thông báo");
             }
-                
-        }
-
-        
-
-        private void btnXuatHoaDon_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            var HoaDon = context.HOADONs.Where(p => p.MAHD == txtMaHD.Text).ToList();
-            InHoaDon ihd = new InHoaDon(HoaDon);
-            ihd.ShowPreview();
         }
     }
 }

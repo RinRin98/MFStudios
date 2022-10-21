@@ -35,7 +35,6 @@
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             this.mainContainer = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.aceDanhMuc = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceThueThietBi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -62,7 +61,6 @@
             this.lblTieuDe = new DevExpress.XtraBars.BarStaticItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.mainContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
@@ -71,8 +69,8 @@
             // 
             // mainContainer
             // 
+            this.mainContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.mainContainer.Controls.Add(this.dateTimePicker1);
-            this.mainContainer.Controls.Add(this.pictureBox1);
             this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainContainer.Location = new System.Drawing.Point(250, 31);
             this.mainContainer.Name = "mainContainer";
@@ -89,17 +87,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(101, 21);
             this.dateTimePicker1.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(706, 504);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // accordionControl1
             // 
@@ -365,7 +352,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.mainContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
@@ -400,7 +386,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceHeThong;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceThongKe;
         private DevExpress.XtraBars.BarStaticItem lblTieuDe;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceThongTin;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }

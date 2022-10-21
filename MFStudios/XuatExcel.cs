@@ -10,7 +10,7 @@ namespace MFStudios
         public static string duongdanex = Application.StartupPath;
         public static void exportecxelhoadon(DataGridView g, string duongdan, string tenfile)
         {
-            duongdan = @"C:\XuatExcel\ChiTietHoaDon\chi-tiet-hoa-don-hang-ngay ";
+            duongdan = @"C:\Users\RIN\Desktop\MFStudios\HoaDon_XuatExcel\";
             app obj = new app();
             obj.Application.Workbooks.Add(Type.Missing);
             obj.Columns.ColumnWidth = 25;

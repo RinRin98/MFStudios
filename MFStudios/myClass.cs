@@ -12,7 +12,7 @@ namespace MFStudios
 {
     public class myClass
     {
-        public static string sqlcon = @"Data Source=DESKTOP-OKIVOU5\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
+        public static string sqlcon = @"Data Source=RIN\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
         public static SqlConnection mycon;
 
         public static SqlConnection Mycon

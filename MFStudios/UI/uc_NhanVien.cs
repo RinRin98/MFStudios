@@ -22,7 +22,7 @@ namespace MFStudios.UI
     public partial class uc_NhanVien : UserControl
     {
 
-        public static string con = @"Data Source=DESKTOP-OKIVOU5\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
+        public static string con = @"Data Source=RIN\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
         public uc_NhanVien()
         {
             InitializeComponent();
@@ -76,7 +76,7 @@ namespace MFStudios.UI
                 {
                     context.NHANVIENs.Remove(find);
                     context.SaveChanges();
-                    MessageBox.Show("Xóa sinh viên thành công!", "Thông Báo", MessageBoxButtons.OK);
+                    MessageBox.Show("Xóa Nhân viên thành công!", "Thông Báo", MessageBoxButtons.OK);
                 }
             }
             else
@@ -126,7 +126,7 @@ namespace MFStudios.UI
         }
         public string TangMa()
         {
-            if (KetNoi("DESKTOP-OKIVOU5\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
+            if (KetNoi("RIN\\SQLEXPRESS", "DBMFSTUDIOS") == false)         //link DATABASE NGUYEN XUAN TOAN
             //if (KetNoi("MSI\\SQLEXPRESS", "DBMFSTUDIOS") == false)            //link DATABASE TRAN THIEN PHUC
             {
                 MessageBox.Show("Nhấn OK để thoát chương trình", "Không kết nối được CSDL!", MessageBoxButtons.OK, MessageBoxIcon.Question);
@@ -139,7 +139,7 @@ namespace MFStudios.UI
             ad.Fill(dt);
             string ma = "NV";
             Random rand = new Random();
-            string random = (rand.Next(99999)).ToString();
+            string random = (rand.Next(9999)).ToString();
 
             return ma + random;
         }
@@ -201,7 +201,7 @@ namespace MFStudios.UI
             {
                 if (kiemtrasodienthoai(txtSDT.Text) == false)
                 {
-                    MessageBox.Show("Sai định dạng số Email!", "Thông báo");
+                    MessageBox.Show("Sai định dạng số điện thoại!", "Thông báo");
                     return;
                 }
                 if (kiemtraMail(txtEmail.Text) == false)

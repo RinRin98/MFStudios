@@ -15,7 +15,7 @@ namespace MFStudios.UI
 {
     public partial class uc_LoaiThietBi : UserControl
     {
-        public static string con = @"Data Source=DESKTOP-OKIVOU5\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
+        public static string con = @"Data Source=RIN\SQLEXPRESS;Initial Catalog=DBMFSTUDIOS;Integrated Security=True";
         public uc_LoaiThietBi()
         {
             InitializeComponent();
@@ -79,7 +79,7 @@ namespace MFStudios.UI
         }
         public string TangMa()
         {
-            if (KetNoi("DESKTOP-OKIVOU5\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
+            if (KetNoi("RIN\\SQLEXPRESS", "DBMFSTUDIOS") == false)          //link DATABASE NGUYEN XUAN TOAN
             //if (KetNoi("MSI\\SQLEXPRESS", "DBMFSTUDIOS") == false)            //link DATABASE TRAN THIEN PHUC
             {
                 MessageBox.Show("Nhấn OK để thoát chương trình", "Không kết nối được CSDL!", MessageBoxButtons.OK, MessageBoxIcon.Question);
@@ -140,7 +140,7 @@ namespace MFStudios.UI
                     tb.TENLOAI = txtTenLoai.Text;
                     context.LOAITHIETBIs.Add(tb);
                     context.SaveChanges();
-                    MessageBox.Show("Thêm Thiết Bị thành công!");
+                    MessageBox.Show("Thêm Loại Thiết Bị thành công!");
                 }
                 else
                 {
@@ -148,7 +148,7 @@ namespace MFStudios.UI
                     find.TENLOAI = txtTenLoai.Text;
                     context.LOAITHIETBIs.AddOrUpdate(find);
                     context.SaveChanges();
-                    MessageBox.Show("Update Thiết Bị thành công!");
+                    MessageBox.Show("Update Loại Thiết Bị thành công!");
                 }
                 BindGird(context.LOAITHIETBIs.ToList());
                 clear();

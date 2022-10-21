@@ -48,10 +48,15 @@
             this.dtpNgay = new System.Windows.Forms.DateTimePicker();
             this.txtTim = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongKe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcChucNang)).BeginInit();
             this.grcChucNang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -61,10 +66,12 @@
             // 
             // dgvThongKe
             // 
+            this.dgvThongKe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThongKe.Location = new System.Drawing.Point(3, 194);
+            this.dgvThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvThongKe.Location = new System.Drawing.Point(0, 0);
             this.dgvThongKe.Name = "dgvThongKe";
-            this.dgvThongKe.Size = new System.Drawing.Size(740, 325);
+            this.dgvThongKe.Size = new System.Drawing.Size(746, 328);
             this.dgvThongKe.TabIndex = 6;
             // 
             // bar2
@@ -189,9 +196,10 @@
             this.grcChucNang.Controls.Add(this.dtpNgay);
             this.grcChucNang.Controls.Add(this.txtTim);
             this.grcChucNang.Controls.Add(this.label2);
-            this.grcChucNang.Location = new System.Drawing.Point(3, 30);
+            this.grcChucNang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grcChucNang.Location = new System.Drawing.Point(0, 0);
             this.grcChucNang.Name = "grcChucNang";
-            this.grcChucNang.Size = new System.Drawing.Size(740, 158);
+            this.grcChucNang.Size = new System.Drawing.Size(746, 157);
             this.grcChucNang.TabIndex = 12;
             this.grcChucNang.Text = "Chức Năng";
             // 
@@ -231,12 +239,29 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Ngày Thanh Toán Hóa Đơn";
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 24);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.grcChucNang);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.dgvThongKe);
+            this.splitContainer1.Size = new System.Drawing.Size(746, 489);
+            this.splitContainer1.SplitterDistance = 157;
+            this.splitContainer1.TabIndex = 17;
+            // 
             // uc_ThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.grcChucNang);
-            this.Controls.Add(this.dgvThongKe);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -249,6 +274,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.grcChucNang)).EndInit();
             this.grcChucNang.ResumeLayout(false);
             this.grcChucNang.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,5 +302,6 @@
         private System.Windows.Forms.DateTimePicker dtpNgay;
         private System.Windows.Forms.TextBox txtTim;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
